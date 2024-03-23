@@ -1,0 +1,36 @@
+.logonav {
+  line-height: 50px;
+}
+.logo {
+  height: auto;
+}
+
+.banner_item {
+  height: 300px;
+  background-image: url(/img/produk1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.acc-text {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.banner_category {
+  width: 100px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.banner_item2 {
+    height: 300px;
+    background-image: url(/img/produk2.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
