@@ -41,36 +41,39 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Product
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Baju</a></li>
-                <li><a class="dropdown-item" href="#">Celana</a></li>
-                <li><a class="dropdown-item" href="#">Jaket</a></li>
+            </a>
+              <ul class="dropdown-menu">  
+                <li><a class="dropdown-item" href="Product/Product.html">Semua Product</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Product/Baju.html">Baju</a></li>
+                <li><a class="dropdown-item" href="Product/Celana.html">Celana</a></li>
+                <li><a class="dropdown-item" href="Product/Jaket.html">Jaket</a></li>
               </ul>
             </li>
           
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#about">About</a>
+              <a class="nav-link" aria-current="page" href="About/About.html">About</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="https://wa.me/6281213458230">Contact</a>
+              <a class="nav-link" aria-current="page" href="Contact/Contact.html">Contact</a>
             </li>
             
           </ul>
-          <!-- SEARCH BAR MULAI -->
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-primary" type="submit">
-              Search
-            </button>
-          </form>
-          <!-- SEARCH BAR SELESAI -->
+
+          <div class="d-flex">
+            <a id="cart-icon" class="nav-link main-icon" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+            </a>
+            <a id="login-icon" class="nav-link main-icon icon1" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+              </svg>
+          </a>
+        </div>
         </div>
       </div>
     </nav>
@@ -148,10 +151,13 @@
     <!-- FOTO SLIDE SELESAI -->
 
     <!-- 2 FOTO PROMOSI MULAI -->
+    <div class="teks-category">
+      <h2 class="acc-text">Kategori</h2>
+    </div>
     <div class="pt-5 container text-center">
       <div class="row">
         <div class="col 6">
-          <div class="banner_item align-items-center">
+          <div class="banner_item align-items-center" style="background-image: url(/img/produk1.jpg);">
 						<div class="banner_category">
 							<a class="acc-text" href="#">Baju</a>
 						</div>
@@ -159,7 +165,7 @@
         </div>
 
         <div class="col 6">
-          <div class="banner_item2 align-items-center">
+          <div class="banner_item2 align-items-center" style="background-image: url(/img/produk2.jpg);">
 						<div class="banner_category">
 							<a class="acc-text" href="#">Celana</a>
 						</div>
@@ -169,79 +175,121 @@
     <!-- 2 FOTO PROMOSI SELESAI -->
 
     <!-- PRODUK MULAI -->
-
-    <div class="mx-5 pt-5 d-flex justify-content-between">
-      <div class="card" style="width: 18rem">
-        <img src="/img/produk1.jpg " class="card-img-top" alt="..." />
+    <div class="teks-category">
+      <h2 class="acc-text">Produk Terlaris</h2>
+    </div>
+    <!-- SECTION SEMUA PRODUK -->
+<div class="container pt-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">Jaket Pria</h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Beli</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img src="/img/produk1.jpg " class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Jaket Pria</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Beli</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img src="/img/produk1.jpg " class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Jaket Pria</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Beli</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img src="/img/produk1.jpg " class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Jaket Pria</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Some quick example text to build on the card title and make up the bulk of the card's content.
           </p>
           <a href="#" class="btn btn-primary">Beli</a>
         </div>
       </div>
     </div>
-    <!-- PRODUK SELESAI -->
 
-<!-- ABOUT SECTION -->
-<section id="about" class="about-section py-5">
-  <div class="container">
-      <h1>About Us</h1>
-      <p>pakaian bekas yang masih layak pakai terus meningkat, 
-      terutama di kalangan konsumen yang mencari barang berkualitas dengan harga yang terjangkau</p>
-      <div class="row align-items-center">
-          <div class="col-md-6">
-              <img src="img/produk4.jpg" width="400px" alt="Clothing" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-              <h2>WangiMantan</h2>
-              <p>WangiMantan merupakan sebuah toko pakaian yang berdiri sejak tahun 2015. Toko ini menjual berbagai baju dan celana. 
-              Bisnis ini menawarkan kesempatan yang menjanjikan bagi UMKM dengan modal yang relatif rendah dan potensi keuntungan yang lumayan. Meskipun merupakan barang bekas, penting bagi UMKM untuk menjaga kualitas produk agar tetap menarik bagi pelanggan. 
-              Persaingan di pasar pakaian seken cukup ketat, sehingga UMKM perlu mencari cara untuk membedakan diri mereka melalui kualitas produk, harga yang bersaing, dan layanan pelanggan yang baik.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-          </div>
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Jaket Pria</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Beli</a>
+        </div>
       </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Jaket Pria</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Beli</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Jaket Pria</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Beli</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Jaket Pria</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Beli</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Jaket Pria</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Beli</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Jaket Pria</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Beli</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="/img/produk3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Jaket Pria</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Beli</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tambahkan produk lainnya dengan format yang serupa -->
+
   </div>
-</section>
-<!-- ABOUT SECTION END -->
+</div>
+<!-- SECTION SEMUA PRODUK END -->
 
 <!-- FOOTER MULAI -->
 <footer class="footer bg-light">

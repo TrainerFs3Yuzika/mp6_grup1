@@ -1,0 +1,44 @@
+.banner_item,
+.banner_item2 {
+  height: 300px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.acc-text {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.banner_category {
+  width: 100px;
+  height: 30px;
+  background-color: #fff;
+  font-family:'Poppins', sans-serif;
+}
+
+.teks-category {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    font-family:'Poppins', sans-serif;
+  }
+
+  .main-icon {
+    transition: transform 0.3s; /* Efek transisi untuk transform */
+  }
+  
+  .main-icon:hover {
+    transform: translate3d(0, -0.150rem, 0); /* Menggeser ikon ke atas saat hover */
+  }
+  
+  .main-icon svg {
+    width: 1.5rem; /* Ukuran ikon */
+    height: 1.5rem; /* Ukuran ikon */
+    fill: #010101; /* Warna ikon */
+  }

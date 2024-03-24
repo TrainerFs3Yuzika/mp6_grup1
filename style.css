@@ -1,13 +1,14 @@
 .logonav {
   line-height: 50px;
 }
+
 .logo {
   height: auto;
 }
 
-.banner_item {
+.banner_item,
+.banner_item2 {
   height: 300px;
-  background-image: url(/img/produk1.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -24,13 +25,72 @@
   width: 100px;
   height: 30px;
   background-color: #fff;
+  font-family:'Poppins', sans-serif;
 }
 
-.banner_item2 {
-    height: 300px;
-    background-image: url(/img/produk2.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.main-icon {
+  transition: transform 0.3s; /* Efek transisi untuk transform */
+}
+
+.main-icon:hover {
+  transform: translate3d(0, -0.150rem, 0); /* Menggeser ikon ke atas saat hover */
+}
+
+.main-icon svg {
+  width: 1.5rem; /* Ukuran ikon */
+  height: 1.5rem; /* Ukuran ikon */
+  fill: #010101; /* Warna ikon */
+}
+
+#about-main {
+  margin-top: 40px;
+  background-color: #f2f2f2;
+  border-radius: 1%;
+}
+
+.teks-about {
+  display: inline-block;
+  padding-right: 100px;
+}
+
+.img-about {
+  margin-right: 1px;
+}
+
+.teks-category {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  font-family:'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .banner_item,
+  .banner_item2 {
+    height: 200px; /* Mengurangi tinggi blok promosi pada layar kecil */
   }
+
+  .teks-about {
+    padding-right: 0; /* Menghapus padding kanan pada teks about */
+    margin-top: 20px; /* Menambah margin atas pada teks about */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar-brand img {
+    width: 40px; /* Mengurangi ukuran logo pada layar sangat kecil */
+  }
+
+  .main-icon svg {
+    width: 1.2rem; /* Mengurangi ukuran ikon pada layar sangat kecil */
+    height: 1.2rem;
+  }
+}
