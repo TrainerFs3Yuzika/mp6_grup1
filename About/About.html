@@ -10,37 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <style>
-  .main-icon {
-    transition: transform 0.3s; /* Efek transisi untuk transform */
-  }
-  
-  .main-icon:hover {
-    transform: translate3d(0, -0.150rem, 0); /* Menggeser ikon ke atas saat hover */
-  }
-  
-  .main-icon svg {
-    width: 1.5rem; /* Ukuran ikon */
-    height: 1.5rem; /* Ukuran ikon */
-    fill: #010101; /* Warna ikon */
-  }
-
-  #about-main {
-  margin-top: 40px;
-  background-color: #f2f2f2;
-  border-radius: 1%;
-}
-
-.teks-about {
-  display: inline-block;
-  padding-right: 100px;
-}
-
-.img-about {
-  margin-right: 1px;
-}
-
-    </style>
+    <link rel="stylesheet" href="styles-about.css" />
   </head>
   <body>
     <!-- NAVBAR MULAI -->
@@ -112,29 +82,22 @@
         </div>
       </nav>
       <!-- NAVBAR SELESAI -->
-
-      <!-- ABOUT SECTION -->
-        <section id="about-main" class="about-section py-5">
-            <div class="about">
-                <h1>About Us</h1>
-                <p>pakaian bekas yang masih layak pakai terus meningkat, 
-                terutama di kalangan konsumen yang mencari barang berkualitas dengan harga yang terjangkau</p>
-                <div class="row align-items-center">
-                    <div class="col-md-6 img-about-content">
-                        <img src="/img/produk4.jpg" width="400px" alt="Clothing" class="img-about">
-                    </div>
-                    <div class="col-md-6 teks-about">
-                        <h2>WangiMantan</h2>
-                        <p>WangiMantan merupakan sebuah toko pakaian yang berdiri sejak tahun 2015. Toko ini menjual berbagai baju dan celana. 
-                        Bisnis ini menawarkan kesempatan yang menjanjikan bagi UMKM dengan modal yang relatif rendah dan potensi keuntungan yang lumayan. Meskipun merupakan barang bekas, penting bagi UMKM untuk menjaga kualitas produk agar tetap menarik bagi pelanggan. 
-                        Persaingan di pasar pakaian seken cukup ketat, sehingga UMKM perlu mencari cara untuk membedakan diri mereka melalui kualitas produk, harga yang bersaing, dan layanan pelanggan yang baik.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
+      <!-- HALAMAN ABOUT MULAI -->
+      <div class="center-container">
+        <div class="container about-content">
+            <div class="row">
+                <div class="col-lg-6 about-text">
+                    <h1>About Us</h1>
+                    <p>Selamat datang di WangiMantan.id, sumber utama Anda untuk semua kebutuhan pakaian. Kami berkomitmen untuk menyediakan yang terbaik dari berbagai pakaian trendi dan fashionable, dengan penekanan pada kualitas, harga terjangkau, dan kepuasan pelanggan.</p>
+                    <p>Didirikan pada tahun 2015 oleh para penggemar fashion, WangiMantan.id telah menempuh perjalanan panjang sejak awalnya. Kami sekarang melayani pelanggan dari seluruh dunia dan sangat senang menjadi bagian dari industri fashion.</p>
+                    <p>Kami harap Anda menikmati produk-produk kami sebanyak kami menikmati menawarkannya kepada Anda. Jika Anda memiliki pertanyaan atau komentar, jangan ragu untuk menghubungi kami.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/img/produk4.jpg" class="img-fluid" alt="About Us Image">
                 </div>
             </div>
-        </section>
-        <!-- ABOUT SECTION END -->
-
+        </div>
+    </div>
     <!-- SCRIPT MULAI -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
