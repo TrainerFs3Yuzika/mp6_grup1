@@ -42,3 +42,88 @@
     height: 1.5rem; /* Ukuran ikon */
     fill: #010101; /* Warna ikon */
   }
+
+      body {
+        font-family: sans-serif;
+      }
+    
+      .menu-filter {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    
+      .menu-filter button {
+        margin: 5px;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      .menu-filter button.active {
+        background-color: #ddd;
+      }
+    
+      .menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    
+      .menu-item {
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+    
+      .menu-item img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+    
+      .menu-item h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+    
+      .menu-item p {
+        margin-bottom: 0;
+      }
+    
+      .food {
+        background-color: #f5f5f5;
+      }
+    
+      .drink {
+        background-color: #fafafa;
+      }
+    
+      .hidden {
+        display: none;
+      }
+    
+      .kategori{
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      .detail-produk img {
+        width: 220px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .menu-list {
+          flex-direction: column;
+        }
+      }
+    
