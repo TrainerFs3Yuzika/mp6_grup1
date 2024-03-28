@@ -37,17 +37,8 @@
               <a class="nav-link active" aria-current="page" href="#Home">Home</a>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Product
-            </a>
-              <ul class="dropdown-menu">  
-                <li><a class="dropdown-item" href="Product/Product.html">Semua Product</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="Product/Baju.html">Baju</a></li>
-                <li><a class="dropdown-item" href="Product/Celana.html">Celana</a></li>
-                <li><a class="dropdown-item" href="Product/Jaket.html">Jaket</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="Product/product.html">Product</a>
             </li>
           
             <li class="nav-item">
@@ -71,7 +62,7 @@
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                 </svg>
             </a>
-            <a id="login-icon" class="nav-link main-icon icon1" href="#">
+            <a id="login-icon" class="nav-link main-icon icon1" href="/login/login.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
@@ -226,14 +217,30 @@
         <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
       </div>
     </div>
-
-
-
     <!-- Tambahkan produk lainnya dengan format yang serupa -->
 
   </div>
 </div>
 <!-- SECTION SEMUA PRODUK END -->
+
+<!-- shopping cart modal start -->
+<div class="modal" data-id="tableModal">
+  <div class="modal-header">
+    <h3>Shopping Cart Modal</h3>
+    <i data-feather="x-circle" class="btn-modal-close"></i>
+  </div>
+  <div class="modal-body">
+    <!-- list start -->
+    <div class="box-container"></div>
+    <!-- list end -->
+    <div class="wrapper">
+      <h4>Total Biaya : </h4>
+      <span class="price">0</span>
+    </div>
+    <button class="button button-checkout">Checkout</button>
+  </div>
+</div>
+<!-- shopping cart modal end -->
 
 <!-- FOOTER MULAI -->
 <footer class="footer bg-light">
