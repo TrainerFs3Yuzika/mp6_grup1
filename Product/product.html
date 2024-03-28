@@ -37,17 +37,8 @@
               <a class="nav-link" aria-current="page" href="/index.html">Home</a>
             </li>
 
-            <li class="nav-item dropdown ">
-              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Product
-            </a>
-            <ul class="dropdown-menu">  
-              <li><a class="dropdown-item" href="Product.html">Semua Product</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="Baju.html">Baju</a></li>
-              <li><a class="dropdown-item" href="Celana.html">Celana</a></li>
-              <li><a class="dropdown-item" href="Jaket.html">Jaket</a></li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="product.html">Product</a>
             </li>
           
             <li class="nav-item">
@@ -96,7 +87,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Detail Produk</h5>
+        <h5 class="modal-title" id="modalTitle">Detail Produk</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -104,14 +95,14 @@
           <div class="col-md-6">
             <div class="detail-produk">
               <a>
-                <img src="/img/Baju-1.png" />
+                <img id="modalImg" src="" />
               </a>
             </div>
           </div>
           <div class="col-md-6">
-            <h2>Baju</h2>
-            <p>Rp. 20.000</p>
-            <p>Deskripsi: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sem ac quam.</p>
+            <h2 id="modalProductName">Produk</h2>
+            <p id="modalProductPrice">Harga</p>
+            <p id="modalProductDescription">Deskripsi</p>
           </div>
         </div>
       </div>
@@ -122,97 +113,94 @@
   </div>
 </div>
 
-
-<!-- Baju -->
+<!-- Daftar Produk -->
 <div class="menu-list">
-  <div class="menu-item baju">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <img
-        id="bajuModalTrigger"
-        src="/img/Baju-1.png"
-      />
-    </a>
+  <!-- Baju -->
+  <div class="menu-list">
+    <!-- Baju -->
+    <div class="menu-item baju" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun
+        Ukuran: M, L, XL">
+      <img src="/img/Baju-1.png" />
+      <h2>Baju</h2>
+      <p>Rp. 20.000</p>
+      <button type="button" class="btn btn-outline-success" onclick="addToCart(1)">Masukkan keranjang</button>
+    </div>
+
+    <div class="menu-item baju" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun12
+        Ukuran: M, L, XL">
+    <img src="/img/Baju-2.png" />
     <h2>Baju</h2>
     <p>Rp. 20.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
 
-  <div class="menu-item baju">
-    <img
-      src="/img/Baju-2.png"
-    />
+  <div class="menu-item baju" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katunsaas
+        Ukuran: M, L, XL">
+    <img src="/img/Baju-3.png" />
     <h2>Baju</h2>
     <p>Rp. 20.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
-
-  <div class="menu-item baju">
-    <img
-      src="/img/Baju-3.png"
-    />
-    <h2>Baju</h2>
-    <p>Rp. 20.000</p>
-    <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
-  </div>
-
-<!-- Celana -->
-  <div class="menu-item celana">
-    <img
-      src="/img/Celana-1.png"
-    />
+  
+  <!-- Celana -->
+  <div class="menu-item celana" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun
+        Ukuran: M, L, XL">
+    <img src="/img/Celana-1.png" />
     <h2>Celana</h2>
     <p>Rp. 18.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
 
-  <div class="menu-item celana">
-    <img
-      src="/img/Celana-2.png"
-    />
+  <div class="menu-item celana" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun
+        Ukuran: M, L, XL">
+    <img src="/img/Celana-2.png" />
     <h2>Celana</h2>
-    <p>Rp. 2.000</p>
+    <p>Rp. 18.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
 
-  <div class="menu-item celana">
-    <img
-      src="/img/Celana-3.png"
-    />
+  <div class="menu-item celana" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun
+        Ukuran: M, L, XL">
+    <img src="/img/Celana-3.png" />
     <h2>Celana</h2>
-    <p>Rp. 5.000</p>
+    <p>Rp. 18.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
 
   <!-- Jaket -->
-  <div class="menu-item jaket">
-    <img
-      src="/img/Jaket-1.png"
-    />
+  <div class="menu-item jaket" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun
+        Ukuran: M, L, XL">
+    <img src="/img/Jaket-1.png" />
     <h2>Jaket</h2>
     <p>Rp. 5.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
 
-  <div class="menu-item jaket">
-    <img
-      src="/img/Jaket-2.png"
-    />
+  <div class="menu-item jaket" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun
+        Ukuran: M, L, XL">
+    <img src="/img/Jaket-2.png" />
     <h2>Jaket</h2>
     <p>Rp. 5.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
 
-  <div class="menu-item jaket">
-    <img
-      src="/img/Jaket-3.png"
-    />
+  <div class="menu-item jaket" data-bs-toggle="modal" data-bs-target="#exampleModal" data-description="Baju: Kaos Putih
+        Bahan: Katun
+        Ukuran: M, L, XL">
+    <img src="/img/Jaket-3.png" />
     <h2>Jaket</h2>
     <p>Rp. 5.000</p>
     <button type="button" class="btn btn-outline-success">Masukkan keranjang</button>
   </div>
 </div>
-
-
 
     <!-- SCRIPT MULAI -->
     <script

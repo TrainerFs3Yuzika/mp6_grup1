@@ -12,8 +12,7 @@ perbaiki bagian html dan style css di bagian section contact  agar tampilan form
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    
     <style>
       .main-icon {
     transition: transform 0.3s; /* Efek transisi untuk transform */
@@ -122,88 +121,56 @@ cursor: default;
   </head>
   <body>
     <!-- NAVBAR MULAI -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light fixed-top mx-auto"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          <img src="/img/logo.jpg" alt="" width="50px" />
-          <span class="logonav">WangiMantan</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/index.html"
-                >Home</a
-              >
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Product
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mx-auto" >
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="/">
+            <img src="/img/logo.jpg" alt="" width="50px" />
+            <span class="logonav">WangiMantan</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Product
               </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="/Product/Product.html"
-                    >Semua Product</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="/Product/Baju.html">Baju</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/Product/Celana.html"
-                    >Celana</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/Product/Jaket.html">Jaket</a>
-                </li>
+              <ul class="dropdown-menu">  
+                <li><a class="dropdown-item" href="/Product/Product.html">Semua Product</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/Product/Baju.html">Baju</a></li>
+                <li><a class="dropdown-item" href="/Product/Celana.html">Celana</a></li>
+                <li><a class="dropdown-item" href="/Product/Jaket.html">Jaket</a></li>
               </ul>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/About/About.html"
-                >About</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-secondary" type="submit">
-              Search
-            </button>
-          </form>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/About/About.html">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Contact.html">Contact</a>
+              </li>
+              
+            </ul>
+  
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
 
           <div class="d-flex">
             <a id="cart-icon" class="nav-link main-icon" href="#">
@@ -273,10 +240,6 @@ cursor: default;
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <!-- Feather Icons -->
-    <script>
-      feather.replace();
-    </script>
     <!-- SCRIPT SELESAI -->
   </body>
 </html>

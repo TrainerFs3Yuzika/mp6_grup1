@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>LOGIN - WangiMantan</title>
+</head>
+<body>
+
+<div class="container" id="container">
+    <div class="form-container sign-up">
+        <form>
+            <h1>Create Account</h1>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registeration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button type="button" id="signUpBtn">Sign Up</button>
+        </form>
+    </div>
+    <div class="form-container sign-in">
+        <form>
+            <h1>Sign In</h1>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email password</span>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <a href="#">Forget Your Password?</a>
+            <button type="button" id="signInBtn">Sign In</button>
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Welcome Back!</h1>
+                <p>Enter your personal details to use all of site features</p>
+                <button class="hidden" id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Hello!</h1>
+                <p>Register with your personal details to use all of site features</p>
+                <button class="hidden" id="register">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
+
+    // Data akun yang disimpan
+    let accounts = [];
+
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("active");
+    });
+
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("active");
+    });
+
+    // Fungsi untuk mendaftarkan akun baru
+    function signUp() {
+        const name = document.querySelector('.sign-up input[type="text"]').value;
+        const email = document.querySelector('.sign-up input[type="email"]').value;
+        const password = document.querySelector('.sign-up input[type="password"]').value;
+
+        // Validasi input
+        if (name.trim() !== '' && email.trim() !== '' && password.trim() !== '') {
+            accounts.push({ name, email, password });
+            alert("Registration successful!");
+            container.classList.remove("active"); // Kembali ke tampilan Sign In setelah pendaftaran berhasil
+        } else {
+            alert("Please fill in all fields.");
+        }
+    }
+
+    // Fungsi untuk masuk
+    function signIn() {
+        const email = document.querySelector('.sign-in input[type="email"]').value;
+        const password = document.querySelector('.sign-in input[type="password"]').value;
+
+        // Periksa kredensial
+        const account = accounts.find(acc => acc.email === email && acc.password === password);
+        if (account) {
+            alert("Login successful!");
+            window.location.href = "/index.html"; // Arahkan ke index.html setelah login berhasil
+        } else {
+            alert("Invalid email or password.");
+        }
+    }
+
+    // Menambahkan event listener untuk tombol Sign Up
+    document.getElementById('signUpBtn').addEventListener('click', signUp);
+
+    // Menambahkan event listener untuk tombol Sign In
+    document.getElementById('signInBtn').addEventListener('click', signIn);
+</script>
+
+</body>
+</html>
