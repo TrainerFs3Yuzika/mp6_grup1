@@ -44,17 +44,4 @@
   border-radius: 10px; /* Rounded corners */
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0, 8);
-  border-bottom: 1px solid #58595a;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 9999;
-}
+
