@@ -2,45 +2,59 @@
 
 /* General styles */
 .main-icon {
-    transition: transform 0.3s; /* Transition effect for transform */
+  transition: transform 0.3s; /* Transition effect for transform */
 }
 
 .main-icon:hover {
-    transform: translate3d(0, -0.150rem, 0); /* Move icon up on hover */
+  transform: translate3d(0, -0.15rem, 0); /* Move icon up on hover */
 }
 
 .main-icon svg {
-    width: 1.5rem; /* Icon size */
-    height: 1.5rem; /* Icon size */
-    fill: #010101; /* Icon color */
+  width: 1.5rem; /* Icon size */
+  height: 1.5rem; /* Icon size */
+  fill: #010101; /* Icon color */
 }
 
 /* About section styles */
 .about-content {
-    padding: 50px; /* Add padding for better spacing */
-    margin-top: 100px;
+  padding: 50px; /* Add padding for better spacing */
+  margin-top: 100px;
 }
 
 .about-text {
-    margin-top: 20px; /* Reduce top margin */
+  margin-top: 20px; /* Reduce top margin */
 }
 
 .about-content p {
-    font-size: 1.1rem; /* Font size for headings and paragraphs */
-    line-height: 1.6; /* Line height */
+  font-size: 1.1rem; /* Font size for headings and paragraphs */
+  line-height: 1.6; /* Line height */
 }
 
 .about-content h1 {
-    color: #333; /* Heading text color */
+  color: #333; /* Heading text color */
 }
 
 .about-content p {
-    color: #666; /* Paragraph text color */
+  color: #666; /* Paragraph text color */
 }
 
 .about-content img {
-    max-width: 80%; /* Make image responsive */
-    height: auto; /* Ensure image aspect ratio */
-    border-radius: 10px; /* Rounded corners */
+  max-width: 80%; /* Make image responsive */
+  height: auto; /* Ensure image aspect ratio */
+  border-radius: 10px; /* Rounded corners */
 }
 
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0, 8);
+  border-bottom: 1px solid #58595a;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
