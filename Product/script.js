@@ -73,8 +73,108 @@ products.forEach(function(product) {
   });
 });
 
-function addToCart(productNumber) {
-  // Menampilkan pesan bahwa produk telah ditambahkan ke keranjang
-  alert('Produk ' + productNumber + ' telah ditambahkan ke keranjang');
+// Fungsi untuk menambahkan produk ke dalam keranjang
+function addToCart(productNumber, category) {
+  const productName = document.querySelector(`.menu-item.${category}:nth-child(${productNumber}) h2`).textContent;
+  const productPrice = document.querySelector(`.menu-item.${category}:nth-child(${productNumber}) p`).textContent;
+  
+  // Memperbarui pesan yang ditampilkan pada modal keranjang
+  document.getElementById("addedProductName").innerText = `Produk ${productName} telah ditambahkan ke keranjang`;
+  // Menampilkan modal keranjang
+  $('#addToCartModal').modal('show');
+
+  // Membuat elemen baru untuk menampilkan produk yang dimasukkan ke dalam keranjang
+  const cartItem = document.createElement('div');
+  cartItem.classList.add('cart-item');
+  cartItem.innerHTML = `
+    <div class="item-info">
+      <h5>${productName}</h5>
+      <p>${productPrice}</p>
+    </div>
+  `;
+
+  // Mengambil offcanvas untuk menambahkan produk ke dalamnya
+  const offcanvasBody = document.querySelector('.offcanvas-body');
+  offcanvasBody.appendChild(cartItem);
+
+  // Menutup offcanvas setelah menambahkan produk
+  const offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight'));
+  offcanvas.hide();
 }
+
+// Variabel untuk melacak nomor urut produk dalam keranjang
+let cartItemCounter = 0;
+
+// Fungsi untuk menambahkan produk ke dalam keranjang
+function addToCart(productNumber, category) {
+  const productName = document.querySelector(`.menu-item.${category}:nth-child(${productNumber}) h2`).textContent;
+  const productPriceString = document.querySelector(`.menu-item.${category}:nth-child(${productNumber}) p`).textContent;
+  const productPrice = parseInt(productPriceString.replace(/[^\d]/g, '')); // Mengambil angka dari string harga (menghilangkan 'Rp.' dan titik)
+  
+  // Memperbarui pesan yang ditampilkan pada modal keranjang
+  document.getElementById("addedProductName").innerText = `Produk ${productName} telah ditambahkan ke keranjang`;
+  // Menampilkan modal keranjang
+  $('#addToCartModal').modal('show');
+
+  // Membuat elemen baru untuk menampilkan produk yang dimasukkan ke dalam keranjang
+  const cartItem = document.createElement('div');
+  cartItem.classList.add('cart-item');
+  cartItemCounter++; // Menambah nomor urut produk
+  cartItem.innerHTML = `
+    <div class="item-info">
+      <h5>${productName}</h5>
+      <p>Harga: Rp. ${productPrice.toLocaleString()}</p>
+    </div>
+    <div class="quantity">
+      <input type="number" value="1" min="1" class="form-control quantity-input" onchange="updateTotalPrice()"> <!-- Tambahkan onchange event untuk memanggil updateTotalPrice() -->
+    </div>
+    <button type="button" class="btn btn-sm btn-danger delete-btn" onclick="removeCartItem(this)">Hapus</button> <!-- Tombol untuk menghapus produk -->
+  `;
+  
+  // Menambahkan data harga dan kuantitas ke elemen produk
+  cartItem.setAttribute('data-price', productPrice);
+  cartItem.setAttribute('data-quantity', 1);
+
+  // Mengambil offcanvas untuk menambahkan produk ke dalamnya
+  const offcanvasBody = document.querySelector('.offcanvas-body');
+  const cartItemsContainer = document.getElementById('cartItems');
+  cartItemsContainer.appendChild(cartItem);
+
+  // Menutup offcanvas setelah menambahkan produk
+  const offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight'));
+  offcanvas.hide();
+
+  // Update total harga setiap kali produk ditambahkan
+  updateTotalPrice();
+}
+
+// Fungsi untuk menghapus produk dari keranjang
+function removeCartItem(button) {
+  button.parentElement.remove(); // Menghapus elemen produk
+  // Update total harga setiap kali produk dihapus
+  updateTotalPrice();
+}
+
+// Fungsi untuk mengupdate total harga berdasarkan kuantitas produk dalam keranjang
+function updateTotalPrice() {
+  // Mengambil semua input quantity
+  const quantityInputs = document.querySelectorAll('.quantity-input');
+  let totalPrice = 0;
+
+  // Menghitung total harga berdasarkan jumlah produk dan harga produk
+  quantityInputs.forEach(input => {
+    const quantity = parseInt(input.value);
+    const price = parseInt(input.parentElement.previousElementSibling.querySelector('p').textContent.replace(/[^\d]/g, '')); // Mengambil angka dari string harga (menghilangkan 'Rp.' dan titik)
+    totalPrice += quantity * price;
+  });
+
+  // Menampilkan total harga
+  document.getElementById('totalPrice').textContent = `Total Harga: Rp. ${totalPrice.toLocaleString()}`;
+}
+
+
+
+
+
+
 

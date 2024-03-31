@@ -57,11 +57,12 @@
           </form>
 
           <div class="d-flex">
-            <a id="cart-icon" class="nav-link main-icon" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                </svg>
+            <a id="cart-icon" class="nav-link main-icon" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>
             </a>
+          
             <a id="login-icon" class="nav-link main-icon icon1" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -81,6 +82,24 @@
   <button id="celanaBtn">Celana</button>
   <button id="jaketBtn">Jaket</button>
 </div>
+
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Keranjang</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <hr> <!-- Garis pemisah -->
+    <div id="cartItems" class="cart-items-container"></div> <!-- Container untuk produk dalam keranjang -->
+    <hr> <!-- Garis pemisah -->
+    <div class="total-price"> <span id="totalPrice">Rp. 0</span></div> <!-- Total harga -->
+    <button type="button" class="btn btn-success btn-lg btn-block mt-3" onclick="checkout()">Bayar</button> <!-- Tombol "Bayar" -->
+  </div>
+</div>
+
+
+<!-- Offcanvas Selesai -->
 
 <!-- Vertically centered modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -112,6 +131,23 @@
     </div>
   </div>
 </div>
+<!-- Keranjang modal -->
+
+<div class="modal fade" id="addToCartModal" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center p-lg-4">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+          <circle class="path circle" fill="none" stroke="#198754" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+          <polyline class="path check" fill="none" stroke="#198754" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+        </svg>
+        <h4 class="text-success mt-3">Produk Ditambahkan</h4>
+        <p class="mt-3" id="addedProductName"></p>
+        <button type="button" class="btn btn-sm mt-3 btn-success" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Daftar Produk -->
 <div class="menu-list">
@@ -124,7 +160,7 @@
       <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Baju-1.png" />
       <h2>Stussy Livin</h2>
       <p>Rp. 389.000</p>
-      <button type="button" class="btn btn-outline-success" onclick="addToCart(1)">Masukkan keranjang</button>
+      <button type="button" class="btn btn-outline-success" onclick="addToCart(1, 'baju')">Masukkan keranjang</button>
     </div>
 
     <div class="menu-item baju" data-description="Baju: Kaos Putih
@@ -133,7 +169,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Baju-2.png" />
     <h2>Stussy S/S</h2>
     <p>Rp. 449.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(2)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(2, 'baju')">Masukkan keranjang</button>
   </div>
 
   <div class="menu-item baju" data-description="Baju: Kaos Putih
@@ -142,7 +178,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Baju-3.png" />
     <h2>Visision Street</h2>
     <p>Rp. 300.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(3)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(3, 'baju')">Masukkan keranjang</button>
   </div>
   
   <!-- Celana -->
@@ -152,7 +188,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Celana-1.png" />
     <h2>Gurkha pants</h2>
     <p>Rp. 399.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(4)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(4, 'celana')">Masukkan keranjang</button>
   </div>
 
   <div class="menu-item celana" data-description="Baju: Kaos Putih
@@ -161,7 +197,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Celana-2.png" />
     <h2>Fatigue pants</h2>
     <p>Rp. 288.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(4)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(5, 'celana')">Masukkan keranjang</button>
   </div>
 
   <div class="menu-item celana" data-description="Baju: Kaos Putih
@@ -170,7 +206,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Celana-3.png" />
     <h2>Trousers rotcho</h2>
     <p>Rp. 180.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(6)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(6, 'celana')">Masukkan keranjang</button>
   </div>
 
   <!-- Jaket -->
@@ -180,7 +216,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Jaket-1.png" />
     <h2>Sweat Adidas</h2>
     <p>Rp. 149.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(7)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(7, 'jaket')">Masukkan keranjang</button>
   </div>
 
   <div class="menu-item jaket" data-description="Baju: Kaos Putih
@@ -189,7 +225,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Jaket-2.png" />
     <h2>Hoodie Nike</h2>
     <p>Rp. 299.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(8)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(8, 'jaket')">Masukkan keranjang</button>
   </div>
 
   <div class="menu-item jaket" data-description="Baju: Kaos Putih
@@ -198,7 +234,7 @@
     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="/img/Jaket-3.png" />
     <h2>Longsleeve</h2>
     <p>Rp. 149.000</p>
-    <button type="button" class="btn btn-outline-success" onclick="addToCart(0)">Masukkan keranjang</button>
+    <button type="button" class="btn btn-outline-success" onclick="addToCart(9, 'jaket')">Masukkan keranjang</button>
   </div>
 </div>
 

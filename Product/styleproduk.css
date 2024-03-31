@@ -121,9 +121,100 @@
         text-align: center;
       }
 
+      .modal#addToCartModal .modal-content {
+        border-radius: 30px;
+      }
+      .modal#addToCartModal .modal-content svg {
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+      }
+      .modal#addToCartModal .modal-content .path,
+      .modal#addToCartModal .modal-content .path.circle {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+        -webkit-animation: dash 0.9s ease-in-out;
+        animation: dash 0.9s ease-in-out;
+      }
+      .modal#addToCartModal .modal-content .path.line {
+        stroke-dashoffset: 1000;
+        -webkit-animation: dash 0.95s 0.35s ease-in-out forwards;
+        animation: dash 0.95s 0.35s ease-in-out forwards;
+      }
+      .modal#addToCartModal .modal-content .path.check {
+        stroke-dashoffset: -100;
+        -webkit-animation: dash-check 0.95s 0.35s ease-in-out forwards;
+        animation: dash-check 0.95s 0.35s ease-in-out forwards;
+      }
+  
+      @-webkit-keyframes dash {
+        0% {
+          stroke-dashoffset: 1000;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+  
+      @keyframes dash {
+        0% {
+          stroke-dashoffset: 1000;
+        }
+        100%{
+          stroke-dashoffset: 0;
+        }
+      }
+  
+      @-webkit-keyframes dash-check {
+        0% {
+          stroke-dashoffset: -100;
+        }
+        100% {
+          stroke-dashoffset: 900;
+        }
+      }
+  
+      @keyframes dash-check {
+        0% {
+          stroke-dashoffset: -100;
+        }
+        100% {
+          stroke-dashoffset: 900;
+        }
+      }
+      
       @media (max-width: 768px) {
         .menu-list {
           flex-direction: column;
         }
       }
+
+      /* CSS untuk tata letak horizontal */
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-item .item-info {
+  flex-grow: 1;
+}
+
+.cart-item .delete-btn {
+  margin-left: 10px;
+}
+
+.quantity-input {
+  width: 60px; /* Atur lebar sesuai kebutuhan */
+  height: 30px; /* Atur tinggi sesuai kebutuhan */
+  font-size: 14px; /* Atur ukuran font sesuai kebutuhan */
+  text-align: center; /* Pusatkan teks dalam input */
+}
+
     
