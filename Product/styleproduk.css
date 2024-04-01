@@ -217,5 +217,9 @@
   text-align: center; /* Pusatkan teks dalam input */
 }
 
+.bank-logo {
+  width: 50px; /* Ubah lebar gambar */
+  height: auto; /* Biarkan tinggi menyesuaikan proporsi gambar */
+}
 
 

@@ -172,7 +172,52 @@ function updateTotalPrice() {
   document.getElementById('totalPrice').textContent = `Total Harga: Rp. ${totalPrice.toLocaleString()}`;
 }
 
+// Fungsi untuk memproses pembayaran
+function prosesPembayaran() {
+  // Mengambil data yang dimasukkan pengguna
+  const nama = document.getElementById('nama').value;
+  const alamat = document.getElementById('alamat').value;
 
+  // Contoh tindakan: menampilkan konfirmasi pembayaran
+  alert(`Terima kasih, ${nama}! Pembayaran Anda telah berhasil diproses. Barang akan dikirim ke alamat ${alamat}.`);
+  
+  // Menutup modal setelah proses pembayaran selesai
+  $('#checkoutModal').modal('hide');
+}
+
+// Ambil elemen-elemen yang dibutuhkan
+const metodeTransferInput = document.getElementById('metodeTransfer');
+const metodeVirtualInput = document.getElementById('metodeVirtual');
+const layananVirtualInputs = document.querySelectorAll('input[name="layananVirtual"]');
+const bankTransferInputs = document.querySelectorAll('input[name="bankTransfer"]');
+
+// Tambahkan event listener untuk metode transfer
+metodeTransferInput.addEventListener('change', function() {
+  if (this.checked) {
+    // Aktifkan pilihan untuk bank transfer dan nonaktifkan pilihan untuk layanan virtual
+    bankTransferInputs.forEach(input => {
+      input.disabled = false;
+    });
+    layananVirtualInputs.forEach(input => {
+      input.checked = false;
+      input.disabled = true; // nonaktifkan pilihan metode virtual
+    });
+  }
+});
+
+// Tambahkan event listener untuk metode virtual
+metodeVirtualInput.addEventListener('change', function() {
+  if (this.checked) {
+    // Aktifkan pilihan untuk layanan virtual dan nonaktifkan pilihan untuk bank transfer
+    layananVirtualInputs.forEach(input => {
+      input.disabled = false;
+    });
+    bankTransferInputs.forEach(input => {
+      input.checked = false;
+      input.disabled = true; // nonaktifkan pilihan metode transfer
+    });
+  }
+});
 
 
 
