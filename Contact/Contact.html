@@ -32,88 +32,76 @@
 
   
 /* Contact Style */
-.wrapper {
-background: #fff;
-width: 90%;
-max-width: 800px; /* maksimum lebar form */
-padding: 2rem;
-margin: 2rem auto; /* agar form berada di tengah */
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
+    #contact {
+      background-color: #fff;
+      padding: 60px 0;
+    }
 
-.contact-form {
-width: 100%;
-}
+    #contact h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-top: 50px;
+    }
 
-.form-group {
-margin-bottom: 1.5rem;
-}
+    #contact p {
+      font-size: 1.1rem;
+      color: #555;
+    }
 
-label {
-display: block;
-margin-bottom: 0.5rem;
-}
+    #contact form {
+      margin-top: 30px;
+    }
 
-input[type="text"],
-input[type="email"],
-textarea {
-width: 100%;
-padding: 1rem 0.8rem;
-border: 1px solid rgba(0, 0, 0, 0.2);
-outline: 0;
-transition: border 0.15s;
-}
+    #contact form label {
+      font-size: 1rem;
+      color: #333;
+    }
 
-textarea {
-resize: vertical;
-}
+    #contact form input[type="text"],
+    #contact form input[type="email"],
+    #contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-.submit {
-background: #1dbcfd;
-color: white;
-font-weight: bold;
-padding: 1rem 1.5rem;
-border: none;
-cursor: pointer;
-transition: background 0.15s;
-}
+    #contact form textarea {
+      resize: none;
+    }
 
-.submit:hover {
-background: rgba(173, 216, 230, 1);
-color: black;
-}
+    #contact form button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-@media screen and (min-width: 576px) {
-.wrapper {
-width: 70%;
-}
-}
+    #contact form button:hover {
+      background-color: #0056b3;
+    }
 
-@media screen and (min-width: 768px) {
-.wrapper {
-width: 55%;
-}
-}
+    #contact .col-lg-6 {
+      margin-bottom: 30px;
+    }
 
-@media screen and (min-width: 992px) {
-.wrapper {
-width: 45%;
-}
-}
+    #map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
-@media screen and (min-width: 1200px) {
-.wrapper {
-width: 35%;
-}
-}
-
-h2 {
-background-color: #1dbcfd; /* Warna background */
-color: white;
-letter-spacing: 0.1rem;
-padding: 1rem;
-cursor: default;
-}
+    @media (max-width: 768px) {
+      #contact h2 {
+        font-size: 2rem;
+      }
+    }
 
     </style>
   </head>
@@ -180,29 +168,78 @@ cursor: default;
     <!-- NAVBAR SELESAI -->
 
     <!-- Contact Section -->
-    <div class="wrapper">
-      <h2>CONTACT US</h2>
-
-      <form action="" method="post">
-          <div class="form-group">
-              <label for="">Full Name</label>
-              <input type="text">
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="mb-4">Contact Us</h2>
+            <p>Kami ingin mendengar pendapat Anda. Kirimkan pesan kepada kami:</p>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="button" class="btn btn-secondary" onclick="resetForm()">Batal</button>
+            </form>
           </div>
-          <div class="form-group">
-              <label for="">Email Address</label>
-              <input type="email" placeholder="example@gmail.com">
+          <div class="col-lg-6">
+            <h2 class="mb-4">Our Location</h2>
+            <p>123 Jalan Merdeka, Kota Bandung, Indonesia</p>
+            <!-- Embed Google Maps code below -->
+            <div id="map" style="height: 300px;">
+              <!-- Paste your Google Maps embed code here -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.625942571156!2d106.82274547129993!3d-6.208763127131084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f432996bd8d7%3A0x56431b88508a8094!2sMonas%2C%20Central%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1648775247447!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  
+            </div>
           </div>
-          <div class="form-group">
-              <label for="">Message</label>
-              <textarea name="" id="" rows="5" placeholder="Type your message here..."></textarea>
-          </div>
-
-          <div class="form-group">
-              <button type="submit" class="submit">Send Message</button>
-          </div>
-      </form>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
+
+    <!-- JavaScript -->
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.querySelector('#name').value;
+      const email = document.querySelector('#email').value;
+      const message = document.querySelector('#message').value;
+      
+      // Simpan data ke localStorage (Anda bisa mengirim data ini ke backend juga)
+      const data = {
+        name,
+        email,
+        message
+      }
+      localStorage.setItem('data', JSON.stringify(data));
+      
+      // Tampilkan notifikasi SweetAlert setelah berhasil mengirim pesan
+      Swal.fire(
+        'Berhasil!',
+        'Pesan Berhasil Terkirim!',
+        'success'
+        );
+  
+      // Reset formulir setelah berhasil mengirim pesan
+      contactForm.reset();
+    });
+    
+    function resetForm() {
+      document.getElementById("contactForm").reset();
+    }
+    </script>
+  
 
     <!-- SCRIPT MULAI -->
     <script
@@ -210,6 +247,8 @@ cursor: default;
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!-- Include SweetAlert library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- SCRIPT SELESAI -->
   </body>
 </html>
