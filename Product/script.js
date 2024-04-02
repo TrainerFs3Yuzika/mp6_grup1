@@ -174,16 +174,30 @@ function updateTotalPrice() {
 
 // Fungsi untuk memproses pembayaran
 function prosesPembayaran() {
+  // Menutup offcanvas
+  const offcanvasElement = document.getElementById('offcanvasRight');
+  const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+  if (offcanvas) {
+    offcanvas.hide();
+  }
+
+  // Menutup modal metode pembayaran
+  $('#modalMetodePembayaran').modal('hide');
+
   // Mengambil data yang dimasukkan pengguna
   const nama = document.getElementById('nama').value;
   const alamat = document.getElementById('alamat').value;
 
-  // Contoh tindakan: menampilkan konfirmasi pembayaran
-  alert(`Terima kasih, ${nama}! Pembayaran Anda telah berhasil diproses. Barang akan dikirim ke alamat ${alamat}.`);
-  
-  // Menutup modal setelah proses pembayaran selesai
-  $('#checkoutModal').modal('hide');
+  // Menampilkan notifikasi SweetAlert
+  Swal.fire({
+    icon: 'success',
+    title: 'Berhasil!',
+    text: `Terima kasih, ${nama}! Pembayaran Anda telah berhasil diproses. Barang akan dikirim ke alamat ${alamat}.`
+  });
 }
+
+
+
 
 // Ambil elemen-elemen yang dibutuhkan
 const metodeTransferInput = document.getElementById('metodeTransfer');

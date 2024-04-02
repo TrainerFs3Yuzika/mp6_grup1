@@ -135,48 +135,37 @@
 html {
   scroll-behavior: smooth;
 }
-/* Footer */
-footer {
-  background-color: var(--mantan2);
-  text-align: center;
-  padding: 1rem 0 3rem;
-  margin-top: 3rem;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #acacac; /* Warna latar belakang footer */
+  padding: 20px;
 }
 
-footer .socials {
-  padding: 1rem 0;
+.footer nav {
+  flex: 1;
+  margin-right: 20px; /* Jarak antara setiap bagian */
 }
 
-footer .socials a {
-  color: var(--dark);
-  margin: 1rem;
+.footer nav:not(:last-child) a {
+  display: block;
+  margin-bottom: 8px; /* Atur jarak antara setiap tautan */
+  padding: 4px 0; /* Atur jarak atas dan bawah serta hilangkan jarak kiri dan kanan */
+  text-decoration: none; /* Hilangkan garis bawah */
 }
 
-footer .socials a:hover,
-footer .links a:hover {
-  color: var(--abu);
+.footer nav:last-child a {
+  display: inline-block; /* Tetapkan kembali ke inline-block untuk tag <a> di bagian "Social" */
+  margin-right: 8px; /* Atur jarak antara setiap tautan */
+  padding: 4px 8px; /* Atur jarak atas, bawah, kiri, dan kanan */
+  text-decoration: none; /* Hilangkan garis bawah */
 }
 
-footer .links {
-  margin-bottom: 1.4rem;
+.footer nav:last-child {
+  margin-right: 0; /* Menghapus margin-right pada elemen terakhir */
 }
 
-footer .links a {
-  color: var(--dark);
-  padding: 0.7rem 1rem;
-}
-
-footer .credit {
-  font-size: 0.8rem;
-}
-footer .credit p {
-  color: var(--dark);
-}
-
-footer .credit a {
-  color: var(--mantan);
-  font-weight: 700;
-}
 
 @media screen and (max-width: 768px) {
   .banner_item,
@@ -220,4 +209,77 @@ footer .credit a {
     min-width: 160px;
     height: 40px;
 }
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("img/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  bottom: 0;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: var(--mantan);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #000000;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero .content .cta:hover {
+  background-color: var(--wangi); /* Ubah warna latar belakang saat dihover */
+  color: var(--mantan); /* Ubah warna teks saat dihover */
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero .content {
+    padding: 1.4rem 5%;
+    text-align: center;
+  }
+
+  .hero .content h1 {
+    font-size: 3em;
+  }
+
+  .hero .content .cta {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+  }
 }
