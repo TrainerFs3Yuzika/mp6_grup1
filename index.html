@@ -14,6 +14,7 @@
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   </head>
   <body>
     <!-- NAVBAR MULAI -->
@@ -219,27 +220,52 @@
     </div>
     <!-- shopping cart modal end -->
 
-    <div id="footer"></div>
-
-    <!-- SCRIPT MULAI -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Feather Icons -->
-    <script>
-      feather.replace();
-    </script>
-    <script>
-      async function loadHTML(file, elementId) {
-        const response = await fetch(file);
-        const content = await response.text();
-        document.getElementById(elementId).innerHTML = content;
-      }
-    
-      loadHTML('/footer.html', 'footer');
-    </script>
-    <!-- SCRIPT SELESAI -->
+    <!-- FOOTER START-->
+    <footer class="footer-newest-ver">
+      <div class="container-footer-newest-ver">
+        <div class="row-footer-newest-ver">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="About/about.html">about us</a></li>
+              <li><a href="/Contact/Contact.html">contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="/Product/product.html">Baju</a></li>
+              <li><a href="/Product/product.html">Celana</a></li>
+              <li><a href="/Product/product.html">Jaket</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-124">
+        <div class="_2023-all-rights-reserved">
+          © 2024 All Rights Reserved
+        </div>
+      </div>
+   </footer>
+   <!-- FOOTER END-->
   </body>
 </html>

@@ -395,37 +395,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: #acacac; /* Warna latar belakang footer */
-  padding: 20px;
-}
-
-.footer nav {
-  flex: 1;
-  margin-right: 20px; /* Jarak antara setiap bagian */
-}
-
-.footer nav:not(:last-child) a {
-  display: block;
-  margin-bottom: 8px; /* Atur jarak antara setiap tautan */
-  padding: 4px 0; /* Atur jarak atas dan bawah serta hilangkan jarak kiri dan kanan */
-  text-decoration: none; /* Hilangkan garis bawah */
-}
-
-.footer nav:last-child a {
-  display: inline-block; /* Tetapkan kembali ke inline-block untuk tag <a> di bagian "Social" */
-  margin-right: 8px; /* Atur jarak antara setiap tautan */
-  padding: 4px 8px; /* Atur jarak atas, bawah, kiri, dan kanan */
-  text-decoration: none; /* Hilangkan garis bawah */
-}
-
-.footer nav:last-child {
-  margin-right: 0; /* Menghapus margin-right pada elemen terakhir */
-}
-
-
 @media screen and (max-width: 768px) {
   .banner_item,
   .banner_item2 {
@@ -625,4 +594,107 @@ html {
 }
 .shop-now a:hover {
   color: grey;
+}
+.container-footer-newest-ver{
+	max-width: 1170px;
+	margin:auto;
+}
+.row-footer-newest-ver{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer-newest-ver{
+	background-color: #24262b;
+  padding: 70px 0px 0px 0px;
+}
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+  }
+}
+.frame-124 {
+  padding: 16px 0px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+._2023-all-rights-reserved {
+  color: var(--300, #737373);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
 }
