@@ -76,77 +76,96 @@
     </nav>
     <!-- NAVBAR SELESAI -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2 class="mb-4">Contact Us</h2>
-            <p>Kami ingin mendengar pendapat Anda. Kirimkan pesan kepada kami:</p>
-            <form id="contactForm">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-              <button type="button" class="btn btn-secondary" onclick="resetForm()">Batal</button>
-            </form>
+    <!-- CONTENT START -->
+  <div class="container mt-5">
+    <h2>Contact Us</h2>
+    <p>Kami ingin mendengar pendapat Anda. Kirimkan pesan kepada kami:</p>
+    <div class="row">
+      <div class="col-md-6">
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
           </div>
-          <div class="col-lg-6">
-            <h2 class="mb-4">Our Location</h2>
-            <p>123 Jalan Merdeka, Kota Bandung, Indonesia</p>
-            <!-- Embed Google Maps code below -->
-            <div id="map" style="height: 300px;">
-              <!-- Paste your Google Maps embed code here -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.625942571156!2d106.82274547129993!3d-6.208763127131084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f432996bd8d7%3A0x56431b88508a8094!2sMonas%2C%20Central%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1648775247447!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  
-            </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-danger" onclick="resetForm()">Batal</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="follow-us mb-4">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+        <div class="contact-info">
+          <h4>Contact Information</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Jalan Sukarapih, Bandung, Jawa Barat</li>
+            <li><i class="fas fa-envelope"></i> WangiMantan@example.com</li>
+            <li><i class="fas fa-phone"></i> +62 811 222 333 44</li>
+          </ul>
+        </div>
       </div>
-    </section>
-
-    <!-- Contact Section -->
+    </div>
+  </div>
+  <!-- CONTENT END -->
 
     <!-- JavaScript -->
-  <script>
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.querySelector('#name').value;
-      const email = document.querySelector('#email').value;
-      const message = document.querySelector('#message').value;
-      
-      // Simpan data ke localStorage (Anda bisa mengirim data ini ke backend juga)
-      const data = {
-        name,
-        email,
-        message
-      }
-      localStorage.setItem('data', JSON.stringify(data));
-      
-      // Tampilkan notifikasi SweetAlert setelah berhasil mengirim pesan
-      Swal.fire(
-        'Berhasil!',
-        'Pesan Berhasil Terkirim!',
-        'success'
+    <script>
+      const contactForm = document.getElementById('contactForm');
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        // Ambil nilai dari input
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        const message = document.querySelector('#message').value;
+        
+        // Cek apakah semua input telah terisi
+        if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+          // Jika belum terisi, tampilkan pesan error
+          Swal.fire(
+            'Error!',
+            'Harap lengkapi terlebih dahulu semua kolom!',
+            'error'
+          );
+          return; // Stop proses
+        }
+        
+        // Simpan data ke localStorage (Anda bisa mengirim data ini ke backend juga)
+        const data = {
+          name,
+          email,
+          message
+        }
+        localStorage.setItem('data', JSON.stringify(data));
+        
+        // Tampilkan notifikasi SweetAlert setelah berhasil mengirim pesan
+        Swal.fire(
+          'Berhasil!',
+          'Pesan Anda Berhasil Terkirim! Terima kasih.',
+          'success'
         );
-  
-      // Reset formulir setelah berhasil mengirim pesan
-      contactForm.reset();
-    });
     
-    function resetForm() {
-      document.getElementById("contactForm").reset();
-    }
+        // Reset formulir setelah berhasil mengirim pesan
+        contactForm.reset();
+      });
+      
+      function resetForm() {
+        document.getElementById("contactForm").reset();
+      }
     </script>
     
     <!-- FOOTER START-->
@@ -154,24 +173,26 @@
       <div class="container-footer-newest-ver">
         <div class="row-footer-newest-ver">
           <div class="footer-col">
-            <h4>company</h4>
+            <h4>WangiMantan</h4>
             <ul>
-              <li><a href="about.html">about us</a></li>
-              <li><a href="/Contact/Contact.html">contact us</a></li>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/Product/product.html">Product</a></li>
+              <li><a href="/About/About.html">About Us</a></li>
+              <li><a href="/Contact/Contact.html">Contact Us</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>get help</h4>
+            <h4>Get Help</h4>
             <ul>
               <li><a href="#">FAQ</a></li>
-              <li><a href="#">shipping</a></li>
-              <li><a href="#">returns</a></li>
-              <li><a href="#">order status</a></li>
-              <li><a href="#">payment options</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment Options</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>online shop</h4>
+            <h4>Online Shop</h4>
             <ul>
               <li><a href="/Product/product.html">Baju</a></li>
               <li><a href="/Product/product.html">Celana</a></li>
@@ -179,7 +200,7 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4>follow us</h4>
+            <h4>Follow Us</h4>
             <div class="social-links">
               <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-twitter"></i></a>
@@ -196,5 +217,15 @@
       </div>
    </footer>
    <!-- FOOTER END-->
+
+   <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Include SweetAlert library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- SCRIPT SELESAI -->
   </body>
 </html>
