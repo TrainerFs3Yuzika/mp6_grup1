@@ -1,0 +1,685 @@
+.about,
+.about * {
+  box-sizing: border-box;
+}
+.about {
+  background: var(--white, #ffffff);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.header {
+  background: var(--white, #ffffff);
+  padding: 0px 68px 0px 68px;
+  display: flex;
+  flex-direction: row;
+  gap: 357px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.group-1 {
+  flex-shrink: 0;
+  width: 210px;
+  height: 37.5px;
+  position: static;
+}
+.logo-1 {
+  width: 100px;
+  height: 37.5px;
+  position: absolute;
+  left: 68px;
+  top: 9.25px;
+  object-fit: cover;
+}
+.wangi-mantan {
+  color: #000000;
+  text-align: center;
+  font-family: "BeVietnamPro-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 179px;
+  top: 20.25px;
+}
+.frame-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.tab-text {
+  padding: 20px 12px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.home {
+  color: var(--500, #262626);
+  text-align: center;
+  font-family: "BebasNeue-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  position: relative;
+}
+.tab-text2 {
+  padding: 20px 12px 0px 12px;
+  flex-shrink: 0;
+  width: 66px;
+  height: 36px;
+  position: relative;
+}
+.products {
+  color: var(--500, #262626);
+  text-align: center;
+  font-family: "BebasNeue-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 14px;
+  top: 20px;
+}
+.about2 {
+  color: var(--500, #262626);
+  text-align: center;
+  font-family: "BebasNeue-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  position: relative;
+}
+.contacs {
+  color: var(--500, #262626);
+  text-align: center;
+  font-family: "BebasNeue-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  position: relative;
+}
+.frame-12 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-13 {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.magnifying-glass {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.frame-2 {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.user {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.frame-3 {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.shopping-cart-simple {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.section-01 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 691px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-14 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 488px;
+  position: relative;
+}
+.we-believe-we-can-all-make-a-difference {
+  color: var(--white, #ffffff);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.our-way-exceptional-quality-ethical-factories-radical-transparency {
+  color: var(--white, #ffffff);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 24px;
+  line-height: 33.24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.section-02 {
+  padding: 76px 258px 76px 258px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.selamat-datang-di-wangi-mantan-id-sumber-utama-anda-untuk-semua-kebutuhan-pakaian-kami-berkomitmen-untuk-menyediakan-yang-terbaik-dari-berbagai-pakaian-trendi-dan-fashionable-dengan-penekanan-pada-kualitas-harga-terjangkau-dan-kepuasan-pelanggan {
+  color: var(--600, #000000);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 38px;
+  line-height: 53.2px;
+  font-weight: 900;
+  position: relative;
+  flex: 1;
+}
+.section-03 {
+  background: var(--timberwolf, #e6ded8);
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 733px;
+  position: relative;
+}
+.image {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  object-fit: cover;
+}
+.frame-15 {
+  padding: 0px 70px 0px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.frame-16 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.our-vision {
+  color: var(--600, #000000);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.our-ethical-approach {
+  color: var(--600, #000000);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.didirikan-pada-tahun-2015-oleh-para-penggemar-fashion-wangi-mantan-id-telah-menempuh-perjalanan-panjang-sejak-awalnya-kami-sekarang-melayani-pelanggan-dari-seluruh-dunia-dan-sangat-senang-menjadi-bagian-dari-industri-fashion-kami-harap-anda-menikmati-produk-produk-kami-sebanyak-kami-menikmati-menawarkannya-kepada-anda-jika-anda-memiliki-pertanyaan-atau-komentar-jangan-ragu-untuk-menghubungi-kami {
+  color: var(--600, #000000);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.image2 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 637px;
+  position: relative;
+  object-fit: cover;
+}
+.section-04 {
+  background: var(--timberwolf, #e6ded8);
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 552px;
+  position: relative;
+}
+.our-quality {
+  color: var(--600, #000000);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.designed-to-last {
+  color: var(--600, #000000);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.di-wangi-mantan-kami-mendorong-keberlanjutan-fashion-tanpa-harus-menjadi-ketinggalan-zaman-semua-produk-kami-berasal-dari-sumber-yang-berintegritas-dan-ramah-lingkungan-untuk-digunakan-dalam-waktu-yang-lebih-lama {
+  color: var(--600, #000000);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.image3 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 560px;
+  position: relative;
+  object-fit: cover;
+}
+.section-06 {
+  padding: 82px 200px 82px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.more-to-explore {
+  color: var(--600, #000000);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.frame-17 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.image4 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 195px;
+  position: relative;
+  object-fit: cover;
+}
+.our-products {
+  color: var(--400, #4c4c4b);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.frame-23 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.our-online-stores {
+  color: var(--400, #4c4c4b);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.frame-24 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.careers {
+  color: var(--400, #4c4c4b);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.footer {
+  background: var(--100, #f5f4f4);
+  padding: 40px 72px 0px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-18 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-19 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.acount {
+  color: var(--500, #262626);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.frame-110 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.log-in {
+  color: var(--300, #737373);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.sign-up {
+  color: var(--300, #737373);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.frame-22 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.company {
+  color: var(--500, #262626);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.about-us {
+  color: var(--300, #737373);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.frame-42 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.connect {
+  color: var(--500, #262626);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.facebook {
+  color: var(--300, #737373);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.instagram {
+  color: var(--300, #737373);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.twitter {
+  color: var(--300, #737373);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.frame-111 {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-112 {
+  background: var(--white, #ffffff);
+  border-style: solid;
+  border-color: var(--200, #dddbdc);
+  border-width: 1px;
+  padding: 18px 15px 18px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 388px;
+  position: relative;
+}
+.email-address {
+  color: var(--300, #737373);
+  text-align: left;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+}
+.frame-192 {
+  background: var(--500, #262626);
+  border-style: solid;
+  border-color: var(--500, #262626);
+  border-width: 1px;
+  padding: 14.5px 14px 14.5px 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.arrow-right {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+}
+.frame-113 {
+  padding: 16px 0px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+._2023-all-rights-reserved {
+  color: var(--300, #737373);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
