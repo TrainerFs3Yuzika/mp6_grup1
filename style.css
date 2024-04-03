@@ -135,6 +135,16 @@
   text-align: center;
   margin-top: 50px;
   font-family:'Poppins', sans-serif;
+  padding: 30px 42px 90px 42px;
+}
+
+.teks-category-2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  font-family:'Poppins', sans-serif;
+  padding: 30px 42px 90px 42px;
 }
 
 /* body {
@@ -531,4 +541,88 @@ html {
     width: 80%;
     margin: 1rem auto;
   }
+}
+
+.section-05 {
+  padding: 90px 42px 30px 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.frame-18 {
+  padding: 44px 0px 44px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 281px;
+  position: relative;
+}
+.frame-19 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.we-re-on-a-mission-to-clean-up-the-industry {
+  color: var(--white, #ffffff);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.read-about-our-progress-in-our-latest-impact-report {
+  color: var(--white, #ffffff);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  position: relative;
+  align-self: stretch;
+}
+.button-section-5 {
+  background: var(--white, #ffffff);
+  padding: 12px 0px 12px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 240px;
+  position: relative;
+}
+.shop-now {
+  color: var(--500, #262626);
+  text-align: center;
+  font-family: "Lato-Black", sans-serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 900;
+  position: relative;
+  text-decoration: none;
+}
+.shop-now a {
+  text-decoration: none;
+  color: inherit;
+}
+.shop-now a:hover {
+  color: grey;
 }

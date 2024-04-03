@@ -435,238 +435,100 @@
   position: relative;
   align-self: stretch;
 }
-.frame-24 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex: 1;
-  position: relative;
+.our-products a, .our-online-stores a {
+  text-decoration: none;
+  color: black;
 }
-.careers {
-  color: var(--400, #4c4c4b);
-  text-align: center;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+.our-products a:hover, .our-online-stores a:hover {
+  color: grey;
 }
-.footer {
-  background: var(--100, #f5f4f4);
-  padding: 40px 72px 0px 72px;
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: center;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+.container-footer-newest-ver{
+	max-width: 1170px;
+	margin:auto;
 }
-.frame-18 {
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+.row-footer-newest-ver{
+	display: flex;
+	flex-wrap: wrap;
 }
-.frame-19 {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex: 1;
-  position: relative;
+ul{
+	list-style: none;
 }
-.acount {
-  color: var(--500, #262626);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+.footer-newest-ver{
+	background-color: #24262b;
+  padding: 70px 0px 0px 0px;
 }
-.frame-110 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
 }
-.log-in {
-  color: var(--300, #737373);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 14px;
-  line-height: 16.8px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
 }
-.sign-up {
-  color: var(--300, #737373);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 14px;
-  line-height: 16.8px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
 }
-.frame-22 {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex: 1;
-  position: relative;
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
 }
-.company {
-  color: var(--500, #262626);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
 }
-.about-us {
-  color: var(--300, #737373);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 14px;
-  line-height: 16.8px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
 }
-.frame-42 {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex: 1;
-  position: relative;
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
 }
-.connect {
-  color: var(--500, #262626);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
 }
-.facebook {
-  color: var(--300, #737373);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 14px;
-  line-height: 16.8px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
 }
-.instagram {
-  color: var(--300, #737373);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 14px;
-  line-height: 16.8px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+  }
 }
-.twitter {
-  color: var(--300, #737373);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 14px;
-  line-height: 16.8px;
-  font-weight: 900;
-  position: relative;
-  align-self: stretch;
-}
-.frame-111 {
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.frame-112 {
-  background: var(--white, #ffffff);
-  border-style: solid;
-  border-color: var(--200, #dddbdc);
-  border-width: 1px;
-  padding: 18px 15px 18px 15px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 388px;
-  position: relative;
-}
-.email-address {
-  color: var(--300, #737373);
-  text-align: left;
-  font-family: "Lato-Black", sans-serif;
-  font-size: 14px;
-  line-height: 16.8px;
-  font-weight: 900;
-  position: relative;
-}
-.frame-192 {
-  background: var(--500, #262626);
-  border-style: solid;
-  border-color: var(--500, #262626);
-  border-width: 1px;
-  padding: 14.5px 14px 14.5px 14px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-}
-.arrow-right {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  position: relative;
-  overflow: visible;
-}
-.frame-113 {
+.frame-124 {
   padding: 16px 0px 16px 0px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
