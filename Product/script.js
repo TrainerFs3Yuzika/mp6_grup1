@@ -1,8 +1,11 @@
 $(document).ready(function () {
+  var urlParams = new URLSearchParams(window.location.search);
+  var category = urlParams.get('category');
+
   $("#allButton").click(function () {
     $(".menu-item").removeClass("hidden");
     $(this).addClass("active");
-    $("#jaketBtn, #celanaBtn, bajuBtn").removeClass("active");
+    $("#jaketBtn, #celanaBtn, #bajuBtn").removeClass("active");
   });
 
   $("#jaketBtn").click(function () {
@@ -25,7 +28,14 @@ $(document).ready(function () {
     $(this).addClass("active");
     $("#allButton, #jaketBtn, #celanaBtn").removeClass("active");
   });
+
+  if (category) {
+    $("#" + category + "Btn").click();
+  } else {
+    $("#allButton").click();
+  }
 });
+
 
 // Mendapatkan elemen tombol close
 var closeButton = document.querySelector('.modal .btn-close');
