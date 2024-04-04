@@ -201,7 +201,7 @@ function prosesPembayaran() {
   // Menampilkan notifikasi SweetAlert
   Swal.fire({
     icon: 'success',
-    title: 'Berhasil!',
+    title: 'Pembelian Berhasil!',
     text: `Terima kasih, ${nama}! Pembayaran Anda telah berhasil diproses. Barang akan dikirim ke alamat ${alamat}.`
   }).then((result) => {
     // Jika pengguna menekan tombol "OK", maka dilakukan proses pembayaran
