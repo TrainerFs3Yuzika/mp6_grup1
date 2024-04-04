@@ -3,22 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./vars.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <style>
-    a, button, input, select, h1, h2, h3, h4, h5, * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      border: none;
-      text-decoration: none;
-      appearance: none;
-      background: none;
-      -webkit-font-smoothing: antialiased;
-    }
-  </style>
   <title>WangiMantan | ABOUT</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
   <link rel="shortcut icon" href="logo-10.jpg" type="image/jpg">
@@ -79,110 +67,85 @@
   </nav>  
   <!-- NAVBAR SELESAI -->
 
-  <!-- Offcanvas -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasRightLabel">Keranjang</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <hr> <!-- Garis pemisah -->
-      <div id="cartItems" class="cart-items-container"></div> <!-- Container untuk produk dalam keranjang -->
-      <hr> <!-- Garis pemisah -->
-      <div class="total-price"> <span id="totalPrice">Rp. 0</span></div> <!-- Total harga -->
-      <button type="button" class="btn btn-success" onclick="checkout()" data-bs-toggle="modal" data-bs-target="#checkoutModal">Bayar</button>
-    </div>
-  </div>
-  <!-- shopping cart modal start -->
-  <div class="modal" data-id="tableModal">
-  <div class="modal-header">
-    <h3>Shopping Cart Modal</h3>
-    <i data-feather="x-circle" class="btn-modal-close"></i>
-  </div>
-  <div class="modal-body"> 
-    <!-- list start -->
-    <div class="box-container"></div><!-- list end -->
-      <div class="wrapper">
-        <h4>Total Biaya : </h4>
-        <span class="price">0</span>
-      </div>
-      <button class="button button-checkout">Checkout</button>
-    </div>
-  </div>
-  <!-- shopping cart modal end -->
-
   <div class="about">
-    <div class="section-01" style="background: url(section-010.png) center; background-size: cover; background-repeat: no-repeat;">
-      <div class="frame-14">
-        <div class="we-believe-we-can-all-make-a-difference">We believe<br />we can all make<br />a difference.</div>
-        <div class="our-way-exceptional-quality-ethical-factories-radical-transparency">Our way: Exceptional quality.<br />Ethical factories. Radical Transparency.</div>
-      </div>
-    </div>
-    <div class="section-02">
-      <div class="selamat-datang-di-wangi-mantan-id-sumber-utama-anda-untuk-semua-kebutuhan-pakaian-kami-berkomitmen-untuk-menyediakan-yang-terbaik-dari-berbagai-pakaian-trendi-dan-fashionable-dengan-penekanan-pada-kualitas-harga-terjangkau-dan-kepuasan-pelanggan">Selamat datang di WangiMantan.id<br />Sumber utama Anda untuk semua kebutuhan pakaian. Kami berkomitmen untuk menyediakan yang terbaik dari berbagai pakaian trendi dan fashionable, dengan penekanan pada kualitas, harga terjangkau, dan kepuasan pelanggan.</div>
-    </div>
-    <div class="section-03">
-      <img class="image" src="image0.png" />
-      <div class="frame-15">
-        <div class="frame-16">
-          <div class="our-vision">OUR VISION</div>
-          <div class="our-ethical-approach">Our ethical approach.</div>
+    <div class="bg-ocean">
+        <div class="container py-5">
+            <div class="row h-100 align-items-center py-5">
+                <div class="col-lg-6 order-2 order-lg-1">
+                  <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+                  <h2 class="font-weight-light">WangiMantan</h2>
+                  <p class="font-italic text-muted mb-4">Selamat datang di WangiMantan - toko pakaian yang memenuhi kebutuhan fashion Anda dengan koleksi baju, celana, dan jaket berkualitas.</p>
+                  <p class="font-italic text-muted mb-4">Dapatkan inspirasi gaya terbaru dan temukan produk yang cocok untuk Anda di WangiMantan..</p>
+              </div>
+                <div class="col-lg-6 d-none d-lg-block"><img
+                        src="pict1.jpg" alt="WangiMantan Fashion"
+                        class="img-fluid img-rounded"></div>
+            </div>
         </div>
-        <div class="didirikan-pada-tahun-2015-oleh-para-penggemar-fashion-wangi-mantan-id-telah-menempuh-perjalanan-panjang-sejak-awalnya-kami-sekarang-melayani-pelanggan-dari-seluruh-dunia-dan-sangat-senang-menjadi-bagian-dari-industri-fashion-kami-harap-anda-menikmati-produk-produk-kami-sebanyak-kami-menikmati-menawarkannya-kepada-anda-jika-anda-memiliki-pertanyaan-atau-komentar-jangan-ragu-untuk-menghubungi-kami">Didirikan pada tahun 2015 oleh para penggemar fashion, WangiMantan.id telah menempuh perjalanan panjang sejak awalnya. Kami sekarang melayani pelanggan dari seluruh dunia dan sangat senang menjadi bagian dari industri fashion.<br />Kami harap Anda menikmati produk-produk kami sebanyak kami menikmati menawarkannya kepada Anda. Jika Anda memiliki pertanyaan atau komentar, jangan ragu untuk menghubungi kami.</div>
-      </div>
     </div>
-    <img class="image2" src="image1.png" />
-    <div class="section-04">
-      <div class="frame-15">
-        <div class="frame-16">
-          <div class="our-quality">OUR QUALITY</div>
-          <div class="designed-to-last">Designed<br />to last.</div>
-        </div>
-        <div class="di-wangi-mantan-kami-mendorong-keberlanjutan-fashion-tanpa-harus-menjadi-ketinggalan-zaman-semua-produk-kami-berasal-dari-sumber-yang-berintegritas-dan-ramah-lingkungan-untuk-digunakan-dalam-waktu-yang-lebih-lama">Di WangiMantan kami mendorong keberlanjutan fashion tanpa harus menjadi ketinggalan zaman. Semua produk kami berasal dari sumber yang berintegritas dan ramah lingkungan untuk digunakan dalam waktu yang lebih lama.</div>
-      </div>
-      <img class="image" src="image2.png" />
-    </div>
-    <img class="image3" src="image3.png" />
-    <div class="section-06">
-      <div class="more-to-explore">More to Explore</div>
-      <div class="frame-17">
-        <div class="frame-4">
-          <img class="image4" src="image4.png" />
-          <div class="our-products">
-            <a href="../Product/product.html">Our Products</a>
+
+    <div class="bg-white py-5">
+      <div class="container py-5">
+          <div class="row align-items-center mb-5">
+              <div class="col-lg-6 order-2 order-lg-1">
+                  <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+                  <h2 class="font-weight-light">Koleksi Terbaru</h2>
+                  <p class="font-italic text-muted mb-4">Temukan koleksi terbaru dari WangiMantan. Mulai dari baju trendy, celana nyaman, hingga jaket stylish untuk menemani gaya Anda sehari-hari.</p>
+                  <div class="text-center">
+                      <a href="/Product/product.html" class="btn btn-outline-success px-5 rounded-pill shadow-sm">Telusuri Lebih Lanjut</a>
+                  </div>
+              </div>
+              <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
+                  <img src="image2.png" alt="Koleksi Terbaru WangiMantan" class="img-fluid mb-4 mb-lg-0 img-rounded">
+              </div>
           </div>
-        </div>
-        <div class="frame-23">
-          <img class="image4" src="image5.png" />
-          <div class="our-online-stores">
-            <a href="https://linktr.ee/wangimantan">Our Online Stores</a>
-          </div>
-        </div>
       </div>
-    </div>
   </div>
+  
+  <div class="bg-ocean py-5">
+      <div class="container py-5">
+          <div class="row align-items-center">
+              <div class="col-lg-5 px-5 mx-auto">
+                  <img src="section-010.png" alt="Koleksi Terbaru WangiMantan" class="img-fluid mb-4 mb-lg-0 img-rounded">
+              </div>
+              <div class="col-lg-6">
+                  <i class="mb-3 text-primary"></i>
+                  <h2 class="font-weight-light">Filosofi Kami</h2>
+                  <p class="font-italic text-muted mb-4">Di WangiMantan, kami mempercayai bahwa gaya adalah tentang ekspresi diri. Kami berkomitmen untuk menyediakan pilihan pakaian yang tidak hanya fashionable tetapi juga memberikan kenyamanan dan kepercayaan diri kepada pelanggan kami.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+        
+        </div>
+    </div>
+</div>
+
   <footer class="footer-newest-ver">
     <div class="container-footer-newest-ver">
       <div class="row-footer-newest-ver">
         <div class="footer-col">
-          <h4>company</h4>
+          <h4>WangiMantan</h4>
           <ul>
-            <li><a href="about.html">about us</a></li>
-            <li><a href="/Contact/Contact.html">contact us</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/Product/product.html">Product</a></li>
+            <li><a href="/About/About.html">About Us</a></li>
+            <li><a href="/Contact/Contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>get help</h4>
+          <h4>Get Help</h4>
           <ul>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment options</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Payment Options</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>online shop</h4>
+          <h4>Online Shop</h4>
           <ul>
             <li><a href="/Product/product.html">Baju</a></li>
             <li><a href="/Product/product.html">Celana</a></li>
@@ -190,7 +153,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>follow us</h4>
+          <h4>Follow Us</h4>
           <div class="social-links">
             <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/wangimantan.id/"><i class="fab fa-twitter"></i></a>

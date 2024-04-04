@@ -43,76 +43,140 @@
 }
 
 /* Contact Style */
-#contact {
-  background-color: #fff;
-  padding: 60px 0;
+.contact-info,
+.follow-us {
+    margin-top: 30px;
+    text-align: center; /* Memposisikan teks ke tengah */
+    margin-bottom: 50px; /* Atur jarak bawah */
 }
 
-#contact h2 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-top: 50px;
+.contact-info h4,
+.follow-us h4 {
+    font-size: 40px; /* Ukuran judul */
+    margin-bottom: 40px;
 }
 
-#contact p {
-  font-size: 1.1rem;
-  color: #555;
+.contact-info p,
+.follow-us .social-icons a {
+  margin-bottom: 10px;
 }
 
-#contact form {
-  margin-top: 30px;
+.contact-info ul {
+    list-style: none;
+    padding: 0;
 }
 
-#contact form label {
-  font-size: 1rem;
-  color: #333;
+.contact-info li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+.contact-info li i {
+    margin-right: 10px;
+    font-size: 24px;
 }
 
-#contact form textarea {
-  resize: none;
+.contact-info li span {
+    font-size: 16px;
 }
 
-#contact form button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* Style untuk form */
+#contactForm {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#contact form button:hover {
-  background-color: #0056b3;
+/* Style untuk input dan textarea */
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-#contact .col-lg-6 {
-  margin-bottom: 30px;
+/* Style untuk tombol */
+#contactForm button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Menambahkan efek transisi untuk background-color dan transform */
 }
 
-#map {
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
+/* Style untuk tombol saat di-hover */
+#contactForm button:hover {
+    background-color: #0056b3; /* Warna latar belakang saat di-hover */
+    transform: translateY(-3px); /* Menggeser tombol ke atas saat di-hover */
 }
 
-@media (max-width: 768px) {
-  #contact h2 {
-    font-size: 2rem;
+/* Style untuk tombol Batal */
+#contactForm button[type="button"] {
+    background-color: #d84a58;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contactForm button[type="button"]:hover {
+    background-color: #d11628; /* Warna latar belakang saat di-hover */
+    transform: translateY(-3px); /* Menggeser tombol ke atas saat di-hover */
+
+}
+
+.social-icons a {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: #fff; /* Warna ikon */
+    background-color: rgba(40, 130, 214, 0.8); /* Warna latar belakang ikon */
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s; /* Efek transisi */
   }
+  
+  .social-icons a:hover {
+    color: #4d4f55; /* Warna ikon saat dihover */
+    background-color: #fff; /* Warna latar belakang ikon saat dihover */
+  }
+
+.container {
+    padding-top: 60px; /* Atur jarak dari atas untuk konten utama */
+    padding-bottom: 50px; /* Atur jarak dari bawah untuk konten utama */
+  }
+  
+  .container h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 48px;
 }
+
+.container p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+  
+  /* Ikuti kami dan info kontak */
+  .follow-us,
+  .contact-info {
+    text-align: center; /* Memposisikan teks ke tengah */
+    margin-bottom: 50px; /* Atur jarak bawah */
+  }
+
+   /* Contact End*/
+
 
 #about-main {
   margin-top: 40px;
