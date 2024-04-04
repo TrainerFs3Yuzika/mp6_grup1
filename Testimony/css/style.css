@@ -123,3 +123,9 @@ body{
         display: none;
     }
 }
+
+.stars {
+    color: gold; /* Warna bintang */
+    font-size: 20px; /* Ukuran bintang */
+    display: block; /* Untuk membuat bintang tampil dalam baris terpisah */
+}
