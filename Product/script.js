@@ -244,6 +244,40 @@ metodeVirtualInput.addEventListener('change', function() {
 });
 
 
+  // Fungsi untuk menangani pencarian
+  function handleSearch(event) {
+    event.preventDefault(); // Mencegah formulir diserahkan secara default
+
+    const query = document.querySelector('input[name="query"]').value; // Mendapatkan nilai pencarian
+    let destination = '/'; // Default rute adalah halaman utama
+
+    // Merutekan pengguna berdasarkan hasil pencarian
+    switch (query.toLowerCase()) {
+      case 'home':
+        destination = '/index.html';
+        break;
+      case 'product':
+        destination = '/Product/product.html';
+        break;
+      case 'about':
+        destination = '/About/About.html';
+        break;
+      case 'contact':
+        destination = '/Contact/Contact.html';
+        break;
+      default:
+        destination = '/'; // Rute default jika pencarian tidak cocok
+    }
+
+    // Navigasi ke halaman yang sesuai
+    window.location.href = destination;
+  }
+
+  // Menambahkan event listener untuk menangani pencarian ketika formulir diserahkan
+  document.querySelector('form[role="search"]').addEventListener('submit', handleSearch);
+
+
+
 
 
 
