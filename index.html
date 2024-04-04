@@ -274,6 +274,35 @@
   
     // Menambahkan event listener untuk menangani pencarian ketika formulir diserahkan
     document.querySelector('form[role="search"]').addEventListener('submit', handleSearch);
+
+    function checkout() {
+          const cartItemsContainer = document.getElementById('cartItems');
+          if (cartItemsContainer.children.length === 0) {
+            Swal.fire({
+              icon: 'warning',
+              title: 'Tidak ada produk di keranjang',
+              text: 'Silakan tambahkan produk ke keranjang terlebih dahulu.',
+            }).then((result) => {
+              if (result.isConfirmed) {
+                // Tutup offcanvas jika terbuka
+                const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasRight'));
+                offcanvas.hide();
+                // Tutup juga checkoutModal jika terbuka
+                $('#checkoutModal').modal('hide');
+              }
+            });
+            return; // Menghentikan eksekusi lebih lanjut jika keranjang kosong
+          }
+          // Lakukan proses pembayaran jika keranjang tidak kosong
+          // Menutup offcanvas
+          const offcanvasElement = document.getElementById('offcanvasRight');
+          const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+          if (offcanvas) {
+            offcanvas.hide();
+          }
+          // Menampilkan modal pembayaran
+          $('#checkoutModal').modal('show');
+          }
   </script>
 
       <!-- Offcanvas -->
@@ -287,7 +316,7 @@
           <div id="cartItems" class="cart-items-container"></div> <!-- Container untuk produk dalam keranjang -->
           <hr> <!-- Garis pemisah -->
           <div class="total-price"> <span id="totalPrice">Rp. 0</span></div> <!-- Total harga -->
-          <button type="button" class="btn btn-success" onclick="checkout()" data-bs-toggle="modal" data-bs-target="#checkoutModal">Bayar</button>
+          <button type="button" class="btn btn-success" onclick="checkout()" data-bs-toggle="modal">Bayar</button>
         </div>
       </div>
       <!-- Offcanvas Selesai -->

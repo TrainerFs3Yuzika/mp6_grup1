@@ -23,10 +23,16 @@
 
 .banner_category {
   width: 100px;
-  height: 30px;
-  background-color: #fff;
+  height: 50px;
+  background-color: #ffffff;
   font-family:'Poppins', sans-serif;
+  border-radius:10%;
 }
+
+.banner_category:hover {
+  background-color: #d6d6d6; /* Warna latar belakang saat hover */
+}
+
 
 .main-icon {
   transition: transform 0.3s; /* Efek transisi untuk transform */
@@ -390,11 +396,6 @@ text-align: center; /* Pusatkan teks dalam input */
 .bank-logo {
 width: 50px; /* Ubah lebar gambar */
 height: auto; /* Biarkan tinggi menyesuaikan proporsi gambar */
-}
-
-.banner_category {
-  height: 50px;
-  background: #fff;
 }
 
 .banner_category a {

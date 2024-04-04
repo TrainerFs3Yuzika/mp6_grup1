@@ -182,41 +182,106 @@ function updateTotalPrice() {
   document.getElementById('totalPrice').textContent = `Total Harga: Rp. ${totalPrice.toLocaleString()}`;
 }
 
-// Fungsi untuk memproses pembayaran
-function prosesPembayaran() {
+function checkout() {
+  const cartItemsContainer = document.getElementById('cartItems');
+  if (cartItemsContainer.children.length === 0) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Tidak ada produk di keranjang',
+      text: 'Silakan tambahkan produk ke keranjang terlebih dahulu.',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Tutup offcanvas jika terbuka
+        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasRight'));
+        offcanvas.hide();
+        // Tutup juga checkoutModal jika terbuka
+        $('#checkoutModal').modal('hide');
+      }
+    });
+    return; // Menghentikan eksekusi lebih lanjut jika keranjang kosong
+  }
+  // Lakukan proses pembayaran jika keranjang tidak kosong
   // Menutup offcanvas
   const offcanvasElement = document.getElementById('offcanvasRight');
   const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
   if (offcanvas) {
     offcanvas.hide();
   }
-
-  // Menutup modal metode pembayaran
-  $('#modalMetodePembayaran').modal('hide');
-
-  // Mengambil data yang dimasukkan pengguna
-  const nama = document.getElementById('nama').value;
-  const alamat = document.getElementById('alamat').value;
-
-  // Menampilkan notifikasi SweetAlert
-  Swal.fire({
-    icon: 'success',
-    title: 'Pembelian Berhasil!',
-    text: `Terima kasih, ${nama}! Pembayaran Anda telah berhasil diproses. Barang akan dikirim ke alamat ${alamat}.`
-  }).then((result) => {
-    // Jika pengguna menekan tombol "OK", maka dilakukan proses pembayaran
-    if (result.isConfirmed) {
-      // Perform payment processing here (this is just a placeholder)
-
-      // Clear the cart after successful purchase
-      $('#cartItems').empty();
-
-      // Update total price to 0
-      $('#totalPrice').text('Rp. 0');
-    }
-  });
+  // Menampilkan modal pembayaran
+  $('#checkoutModal').modal('show');
 }
 
+
+
+// Fungsi untuk memproses pembayaran
+function prosesPembayaran() {
+  // Mendapatkan data yang dimasukkan pengguna
+  const nama = document.getElementById('nama').value;
+  const nohp = document.getElementById('nohp').value;
+  const kecamatan = document.getElementById('kecamatan').value;
+  const provinsi = document.getElementById('provinsi').value;
+  const kota = document.getElementById('kota').value;
+  const kodepos = document.getElementById('kodepos').value;
+  const alamat = document.getElementById('alamat').value;
+
+  // Memeriksa apakah semua input telah diisi
+  if (!nama || !nohp || !kecamatan || !provinsi || !kota || !kodepos || !alamat) {
+    // Jika ada input yang kosong, tampilkan pesan kesalahan
+    Swal.fire({
+      icon: 'error',
+      title: 'Isian Form Belum Lengkap!',
+      text: 'Silakan lengkapi semua kolom sebelum melanjutkan pembayaran.'
+    }).then((result) => {
+      // Jika pengguna menekan "OK", buka kembali modal pengisian data diri
+      if (result.isConfirmed) {
+        // Menutup modal metode pembayaran
+        $('#modalMetodePembayaran').modal('hide');
+        // Buka kembali modal pengisian data diri
+        $('#checkoutModal').modal('show');
+      }
+    });
+    return; // Hentikan proses pembayaran jika ada input yang kosong
+  } else {
+    // Jika semua input telah diisi, lanjutkan dengan proses pembayaran
+    // Menutup offcanvas
+    const offcanvasElement = document.getElementById('offcanvasRight');
+    const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+    if (offcanvas) {
+      offcanvas.hide();
+    }
+
+    // Menampilkan notifikasi SweetAlert untuk pembelian berhasil
+    Swal.fire({
+      icon: 'success',
+      title: 'Pembelian Berhasil!',
+      text: `Terima kasih, ${nama}! Pembayaran Anda telah berhasil diproses. Barang akan dikirim ke alamat ${alamat}.`
+    }).then((result) => {
+      // Jika pengguna menekan tombol "OK", maka dilakukan proses pembayaran
+      if (result.isConfirmed) {
+        // Perform payment processing here (this is just a placeholder)
+
+        // Clear the cart after successful purchase
+        $('#cartItems').empty();
+
+        // Update total price to 0
+        $('#totalPrice').text('Rp. 0');
+
+        // Mengosongkan nilai input setelah pembelian berhasil
+        document.getElementById('nama').value = '';
+        document.getElementById('nohp').value = '';
+        document.getElementById('kecamatan').value = '';
+        document.getElementById('provinsi').value = '';
+        document.getElementById('kota').value = '';
+        document.getElementById('kodepos').value = '';
+        document.getElementById('alamat').value = '';
+
+      }
+    });
+        // Menutup modal metode pembayaran
+        $('#modalMetodePembayaran').modal('hide');
+        
+  }
+}
 
 
 // Ambil elemen-elemen yang dibutuhkan
@@ -285,3 +350,8 @@ metodeVirtualInput.addEventListener('change', function() {
 
   // Menambahkan event listener untuk menangani pencarian ketika formulir diserahkan
   document.querySelector('form[role="search"]').addEventListener('submit', handleSearch);
+
+  
+  
+  
+  
