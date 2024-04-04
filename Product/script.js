@@ -203,8 +203,21 @@ function prosesPembayaran() {
     icon: 'success',
     title: 'Berhasil!',
     text: `Terima kasih, ${nama}! Pembayaran Anda telah berhasil diproses. Barang akan dikirim ke alamat ${alamat}.`
+  }).then((result) => {
+    // Jika pengguna menekan tombol "OK", maka dilakukan proses pembayaran
+    if (result.isConfirmed) {
+      // Perform payment processing here (this is just a placeholder)
+
+      // Clear the cart after successful purchase
+      $('#cartItems').empty();
+
+      // Update total price to 0
+      $('#totalPrice').text('Rp. 0');
+    }
   });
 }
+
+
 
 // Ambil elemen-elemen yang dibutuhkan
 const metodeTransferInput = document.getElementById('metodeTransfer');

@@ -441,69 +441,7 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
-    <script>
-      // Function to toggle button state based on cart item count
-      function toggleBayarButton() {
-        // Get the number of items in the cart
-        var cartItemCount = $('#cartItems').children().length;
     
-        // If cart is empty, disable the button. Otherwise, enable it.
-        $('#bayarButton').prop('disabled', cartItemCount === 0);
-      }
-    
-      // Call toggleBayarButton initially to set button state on page load
-      toggleBayarButton();
-    
-      // Listen for changes in cart items and update button state
-      $('#cartItems').on('DOMSubtreeModified', function() {
-        toggleBayarButton();
-      });
-    </script>
-    <script>
-      // Function to confirm purchase and clear cart
-      function checkout() {
-        // Open confirmation modal
-        $('#checkoutModal').modal('show');
-      }
-    
-      // Function to process payment
-      function prosesPembayaran() {
-        // Perform payment processing here (this is just a placeholder)
-    
-        // Clear the cart after successful purchase
-        $('#cartItems').empty();
-    
-        // Update total price to 0
-        $('#totalPrice').text('Rp. 0');
-    
-        // Close checkout modal
-        $('#checkoutModal').modal('hide');
-    
-        // Show success message (you can customize this)
-        Swal.fire({
-          icon: 'success',
-          title: 'Pembelian Berhasil!',
-          text: 'Terima kasih atas pembelian Anda!',
-        });
-      }
-    
-      // Function to toggle button state based on cart item count
-      function toggleBayarButton() {
-        // Get the number of items in the cart
-        var cartItemCount = $('#cartItems').children().length;
-    
-        // If cart is empty, disable the button. Otherwise, enable it.
-        $('#bayarButton').prop('disabled', cartItemCount === 0);
-      }
-    
-      // Call toggleBayarButton initially to set button state on page load
-      toggleBayarButton();
-    
-      // Listen for changes in cart items and update button state
-      $('#cartItems').on('DOMSubtreeModified', function() {
-        toggleBayarButton();
-      });
-    </script>
     <!-- SCRIPT SELESAI -->
   </body>
 </html>
