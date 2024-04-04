@@ -92,17 +92,20 @@
 
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Keranjang</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <hr> <!-- Garis pemisah -->
-        <div id="cartItems" class="cart-items-container"></div> <!-- Container untuk produk dalam keranjang -->
-        <hr> <!-- Garis pemisah -->
-        <div class="total-price"> <span id="totalPrice">Rp. 0</span></div> <!-- Total harga -->
-        <button type="button" class="btn btn-success" onclick="checkout()" data-bs-toggle="modal" data-bs-target="#checkoutModal">Bayar</button>
-      </div>
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Keranjang</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <hr>
+            <div id="cartItems" class="cart-items-container"></div>
+            <hr>
+            <div class="total-price">
+                <span id="totalPrice">Rp. 0</span>
+            </div>
+            <!-- Bayar button with id -->
+            <button id="bayarButton" type="button" class="btn btn-success" onclick="checkout()" data-bs-toggle="modal" data-bs-target="#checkoutModal">Bayar</button>
+        </div>
     </div>
     <!-- Offcanvas Selesai -->
 
@@ -437,6 +440,56 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      // Function to toggle button state based on cart item count
+      function toggleBayarButton() {
+        // Get the number of items in the cart
+        var cartItemCount = $('#cartItems').children().length;
+    
+        // If cart is empty, disable the button. Otherwise, enable it.
+        $('#bayarButton').prop('disabled', cartItemCount === 0);
+      }
+    
+      // Call toggleBayarButton initially to set button state on page load
+      toggleBayarButton();
+    
+      // Listen for changes in cart items and update button state
+      $('#cartItems').on('DOMSubtreeModified', function() {
+        toggleBayarButton();
+      });
+    
+      // Function to confirm purchase and clear cart
+      function checkout() {
+        // Open confirmation modal
+        $('#checkoutModal').modal('show');
+      }
+    
+      // Function to process payment
+      function prosesPembayaran() {
+        // Perform payment processing here (this is just a placeholder)
+    
+        // Clear the cart after successful purchase
+        $('#cartItems').empty();
+    
+        // Update total price to 0
+        $('#totalPrice').text('Rp. 0');
+    
+        // Hide the checkout modal
+        hideCheckoutModal();
+      }
+    
+      // Function to hide the checkout modal
+      function hideCheckoutModal() {
+        $('#checkoutModal').modal('hide');
+    
+        // Show success message (you can customize this)
+        Swal.fire({
+          icon: 'success',
+          title: 'Pembelian Berhasil!',
+          text: 'Terima kasih atas pembelian Anda!',
+        });
+      }
+    </script>                
     <!-- SCRIPT SELESAI -->
   </body>
 </html>
