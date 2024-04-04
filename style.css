@@ -132,22 +132,23 @@
 }
 
 .social-icons a {
-    display: inline-block;
-    height: 44px;
-    width: 44px;
-    color: #fff; /* Warna ikon */
-    background-color: rgba(40, 130, 214, 0.8); /* Warna latar belakang ikon */
-    margin: 0 8px 8px 0;
-    text-align: center;
-    line-height: 44px;
-    border-radius: 50%;
-    transition: 0.4s; /* Efek transisi */
-  }
-  
-  .social-icons a:hover {
-    color: #4d4f55; /* Warna ikon saat dihover */
-    background-color: #fff; /* Warna latar belakang ikon saat dihover */
-  }
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  color: #fff; /* Warna ikon */
+  background-color: rgba(7, 125, 236, 0.911); /* Warna latar belakang ikon */
+  margin: 0 8px 8px 0;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Efek transisi scaling */
+}
+
+.social-icons a:hover {
+  color: #fff; /* Warna ikon saat dihover */
+  background-color: rgba(65, 134, 224, 0.712); /* Warna latar belakang ikon saat dihover */
+  transform: scale(1.1); /* Memperbesar ikon saat dihover */
+}
 
 .container {
     padding-top: 60px; /* Atur jarak dari atas untuk konten utama */
