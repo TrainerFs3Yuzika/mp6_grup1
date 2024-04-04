@@ -206,9 +206,6 @@ function prosesPembayaran() {
   });
 }
 
-
-
-
 // Ambil elemen-elemen yang dibutuhkan
 const metodeTransferInput = document.getElementById('metodeTransfer');
 const metodeVirtualInput = document.getElementById('metodeVirtual');
@@ -275,9 +272,3 @@ metodeVirtualInput.addEventListener('change', function() {
 
   // Menambahkan event listener untuk menangani pencarian ketika formulir diserahkan
   document.querySelector('form[role="search"]').addEventListener('submit', handleSearch);
-
-
-
-
-
-
