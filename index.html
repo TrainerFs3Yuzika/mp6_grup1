@@ -55,8 +55,8 @@
             
           </ul>
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form class="d-flex" role="search" action="/search" method="GET"> 
+            <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search"> 
             <button class="btn btn-outline-secondary" type="submit">Search</button>
           </form>
 
@@ -101,36 +101,36 @@
       </div>
     </div>
     <!-- 2 FOTO PROMOSI MULAI -->
-      <div class="teks-category">
-        <h2 class="acc-text">Kategori</h2>
-        <div class="banner">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="banner_item align-items-center" style="background-image:url(img/Baju-Kategori.png)">
-                  <div class="banner_category">
-                    <a href="/Product/product.html">Baju</a>
-                  </div>
+    <div class="teks-category">
+      <h2 class="acc-text">Kategori</h2>
+      <div class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="banner_item align-items-center" style="background-image:url(img/Baju-Kategori.png)">
+                <div class="banner_category">
+                  <a href="/Product/product.html?category=baju">Baju</a>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="banner_item align-items-center" style="background-image:url(img/Celana-Kategori.png)">
-                  <div class="banner_category">
-                    <a href="/Product/product.html">Celana</a>
-                  </div>
+            </div>
+            <div class="col-md-4">
+              <div class="banner_item align-items-center" style="background-image:url(img/Celana-Kategori.png)">
+                <div class="banner_category">
+                  <a href="/Product/product.html?category=celana">Celana</a>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="banner_item align-items-center" style="background-image:url(img/Jaket-kategori.png)">
-                  <div class="banner_category">
-                    <a href="/Product/product.html">Jaket</a>
-                  </div>
+            </div>
+            <div class="col-md-4">
+              <div class="banner_item align-items-center" style="background-image:url(img/Jaket-kategori.png)">
+                <div class="banner_category">
+                  <a href="/Product/product.html?category=jaket">Jaket</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>    
     <!-- 2 FOTO PROMOSI SELESAI -->
 
     <!-- BANNER START -->
@@ -167,7 +167,6 @@
       <!-- Baju -->
       <div class="menu-list">
         <div class="menu-item baju">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img
               id="bajuModalTrigger"
               src="/img/Baju-1.png"
@@ -254,9 +253,9 @@
           <div class="footer-col">
             <h4>Online Shop</h4>
             <ul>
-              <li><a href="/Product/product.html">Baju</a></li>
-              <li><a href="/Product/product.html">Celana</a></li>
-              <li><a href="/Product/product.html">Jaket</a></li>
+              <li><a href="/Product/product.html?category=baju">Baju</a></li>
+              <li><a href="/Product/product.html?category=celana">Celana</a></li>
+              <li><a href="/Product/product.html?category=jaket">Jaket</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -277,5 +276,40 @@
       </div>
    </footer>
    <!-- FOOTER END-->
+
+   <script>
+    // Fungsi untuk menangani pencarian
+    function handleSearch(event) {
+      event.preventDefault(); // Mencegah formulir diserahkan secara default
+  
+      const query = document.querySelector('input[name="query"]').value; // Mendapatkan nilai pencarian
+      let destination = '/'; // Default rute adalah halaman utama
+  
+      // Merutekan pengguna berdasarkan hasil pencarian
+      switch (query.toLowerCase()) {
+        case 'home':
+          destination = '/index.html';
+          break;
+        case 'product':
+          destination = '/Product/product.html';
+          break;
+        case 'about':
+          destination = '/About/About.html';
+          break;
+        case 'contact':
+          destination = '/Contact/Contact.html';
+          break;
+        default:
+          destination = '/'; // Rute default jika pencarian tidak cocok
+      }
+  
+      // Navigasi ke halaman yang sesuai
+      window.location.href = destination;
+    }
+  
+    // Menambahkan event listener untuk menangani pencarian ketika formulir diserahkan
+    document.querySelector('form[role="search"]').addEventListener('submit', handleSearch);
+  </script>
+
   </body>
 </html>

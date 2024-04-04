@@ -1,8 +1,11 @@
 $(document).ready(function () {
+  var urlParams = new URLSearchParams(window.location.search);
+  var category = urlParams.get('category');
+
   $("#allButton").click(function () {
     $(".menu-item").removeClass("hidden");
     $(this).addClass("active");
-    $("#jaketBtn, #celanaBtn, bajuBtn").removeClass("active");
+    $("#jaketBtn, #celanaBtn, #bajuBtn").removeClass("active");
   });
 
   $("#jaketBtn").click(function () {
@@ -25,7 +28,14 @@ $(document).ready(function () {
     $(this).addClass("active");
     $("#allButton, #jaketBtn, #celanaBtn").removeClass("active");
   });
+
+  if (category) {
+    $("#" + category + "Btn").click();
+  } else {
+    $("#allButton").click();
+  }
 });
+
 
 // Mendapatkan elemen tombol close
 var closeButton = document.querySelector('.modal .btn-close');
@@ -232,6 +242,40 @@ metodeVirtualInput.addEventListener('change', function() {
     });
   }
 });
+
+
+  // Fungsi untuk menangani pencarian
+  function handleSearch(event) {
+    event.preventDefault(); // Mencegah formulir diserahkan secara default
+
+    const query = document.querySelector('input[name="query"]').value; // Mendapatkan nilai pencarian
+    let destination = '/'; // Default rute adalah halaman utama
+
+    // Merutekan pengguna berdasarkan hasil pencarian
+    switch (query.toLowerCase()) {
+      case 'home':
+        destination = '/index.html';
+        break;
+      case 'product':
+        destination = '/Product/product.html';
+        break;
+      case 'about':
+        destination = '/About/About.html';
+        break;
+      case 'contact':
+        destination = '/Contact/Contact.html';
+        break;
+      default:
+        destination = '/'; // Rute default jika pencarian tidak cocok
+    }
+
+    // Navigasi ke halaman yang sesuai
+    window.location.href = destination;
+  }
+
+  // Menambahkan event listener untuk menangani pencarian ketika formulir diserahkan
+  document.querySelector('form[role="search"]').addEventListener('submit', handleSearch);
+
 
 
 

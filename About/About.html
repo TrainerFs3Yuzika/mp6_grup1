@@ -45,8 +45,8 @@
             <a class="nav-link" href="/Contact/Contact.html">Contact</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" role="search" action="/search" method="GET"> 
+          <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search"> 
           <button class="btn btn-outline-secondary" type="submit">Search</button>
         </form>
         <div class="d-flex">
@@ -147,9 +147,9 @@
         <div class="footer-col">
           <h4>Online Shop</h4>
           <ul>
-            <li><a href="/Product/product.html">Baju</a></li>
-            <li><a href="/Product/product.html">Celana</a></li>
-            <li><a href="/Product/product.html">Jaket</a></li>
+            <li><a href="/Product/product.html?category=baju">Baju</a></li>
+            <li><a href="/Product/product.html?category=celana">Celana</a></li>
+            <li><a href="/Product/product.html?category=jaket">Jaket</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -169,5 +169,40 @@
       </div>
     </div>
  </footer>
+
+ <script>
+    // Fungsi untuk menangani pencarian
+    function handleSearch(event) {
+      event.preventDefault(); // Mencegah formulir diserahkan secara default
+
+      const query = document.querySelector('input[name="query"]').value; // Mendapatkan nilai pencarian
+      let destination = '/'; // Default rute adalah halaman utama
+
+      // Merutekan pengguna berdasarkan hasil pencarian
+      switch (query.toLowerCase()) {
+        case 'home':
+          destination = '/index.html';
+          break;
+        case 'product':
+          destination = '/Product/product.html';
+          break;
+        case 'about':
+          destination = '/About/About.html';
+          break;
+        case 'contact':
+          destination = '/Contact/Contact.html';
+          break;
+        default:
+          destination = '/'; // Rute default jika pencarian tidak cocok
+      }
+
+      // Navigasi ke halaman yang sesuai
+      window.location.href = destination;
+    }
+
+    // Menambahkan event listener untuk menangani pencarian ketika formulir diserahkan
+    document.querySelector('form[role="search"]').addEventListener('submit', handleSearch);
+</script>
+
 </body>
 </html>

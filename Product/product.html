@@ -55,10 +55,11 @@
             
           </ul>
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form class="d-flex" role="search" action="/search" method="GET"> 
+            <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search"> 
             <button class="btn btn-outline-secondary" type="submit">Search</button>
           </form>
+
           <!-- Container untuk Menampilkan Hasil Pencarian -->
           <div id="searchResults"></div>
 
@@ -408,9 +409,9 @@
           <div class="footer-col">
             <h4>Online Shop</h4>
             <ul>
-              <li><a href="/Product/product.html">Baju</a></li>
-              <li><a href="/Product/product.html">Celana</a></li>
-              <li><a href="/Product/product.html">Jaket</a></li>
+              <li><a href="/Product/product.html?category=baju">Baju</a></li>
+              <li><a href="/Product/product.html?category=celana">Celana</a></li>
+              <li><a href="/Product/product.html?category=jaket">Jaket</a></li>
             </ul>
           </div>
           <div class="footer-col">
