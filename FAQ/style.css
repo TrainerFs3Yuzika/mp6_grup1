@@ -3,7 +3,7 @@
     padding: 100px 50px 50px 50px; /* Padding for the FAQ section */
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    background: #e3edf7; /* Light blue background */
+    background: #F5FFFA; /* Light blue background */
     overflow: hidden; /* Hindari overflow dari elemen anak */
 }
 
@@ -18,7 +18,7 @@
     margin: 20px 0; /* Mengurangi margin atas dan bawah untuk perangkat kecil */
     padding: 10px;
     border-radius: 8px;
-    background: #e3edf7; /* Light blue background */
+    background: whitesmoke; /* Light blue background */
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7); /* Add a subtle shadow */
 }
 
