@@ -1,0 +1,15 @@
+.contact-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.contact-info ul li {
+  margin-left: 150px; /* Atur sesuai kebutuhan */
+  text-align: center;
+}
+
+/* layar tablet */
+@media (max-width: 768px) {
+    .contact-info ul li {
+        margin-left: 10px;
+}
+
