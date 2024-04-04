@@ -89,20 +89,7 @@ body{
     color: #707070;
     text-align: center;
 }
-.button{
-    border: none;
-    font-size: 16px;
-    color: #FFF;
-    padding: 8px 16px;
-    background-color: #4070f4;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.button:hover{
-    background: #265df2;
-}
+
 .swiper-navBtn{
     color: #6e93f7;
     transition: color 0.3s ease;
@@ -136,4 +123,10 @@ body{
     .swiper-navBtn{
         display: none;
     }
+}
+
+.stars {
+    color: gold; /* Warna bintang */
+    font-size: 20px; /* Ukuran bintang */
+    display: block; /* Untuk membuat bintang tampil dalam baris terpisah */
 }
