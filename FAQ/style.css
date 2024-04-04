@@ -1,0 +1,61 @@
+/* FAQ Section */
+.faq-section {
+    padding: 100px 50px 50px 50px; /* Padding for the FAQ section */
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: #e3edf7; /* Light blue background */
+    overflow: hidden; /* Hindari overflow dari elemen anak */
+}
+
+.accordion {
+    margin: 0 auto; /* Menghilangkan margin atas dan bawah */
+    max-width: 600px; /* Menggunakan max-width untuk menjaga batas accordion */
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin: 20px 0; /* Mengurangi margin atas dan bawah untuk perangkat kecil */
+    padding: 10px;
+    border-radius: 8px;
+    background: #e3edf7; /* Light blue background */
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7); /* Add a subtle shadow */
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 400px;
+    padding: 10px; /* Mengatur padding agar responsif */
+}
+
+.accordion input[type="radio"]:checked + label::before {
+    content: '-';
+}

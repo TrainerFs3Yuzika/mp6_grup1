@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WangiMantan | HOME</title>
+    <title>WangiMantan | FAQs</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -38,7 +39,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="/index.html">Home</a>
             </li>
 
             <li class="nav-item">
@@ -78,14 +79,6 @@
     </nav>
     <!-- NAVBAR SELESAI -->
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <main class="content">
-        <h1>Produk Berkualitas? Ya di WangiMantan!</h1>
-        <a href="/Product/product.html" class="cta">Belanja Sekarang</a>
-      </main>
-    </section>
-    <!-- Hero Section End -->
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
@@ -100,114 +93,6 @@
         <button type="button" class="btn btn-success" onclick="checkout()" data-bs-toggle="modal" data-bs-target="#checkoutModal">Bayar</button>
       </div>
     </div>
-    <!-- 2 FOTO PROMOSI MULAI -->
-      <div class="teks-category">
-        <h2 class="acc-text">Kategori</h2>
-        <div class="banner">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="banner_item align-items-center" style="background-image:url(img/Baju-Kategori.png)">
-                  <div class="banner_category">
-                    <a href="/Product/product.html">Baju</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="banner_item align-items-center" style="background-image:url(img/Celana-Kategori.png)">
-                  <div class="banner_category">
-                    <a href="/Product/product.html">Celana</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="banner_item align-items-center" style="background-image:url(img/Jaket-kategori.png)">
-                  <div class="banner_category">
-                    <a href="/Product/product.html">Jaket</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- 2 FOTO PROMOSI SELESAI -->
-
-    <!-- BANNER START -->
-    <div class="section-05">
-      <div
-        class="frame-18"
-        style="
-          background: url(img/frame-17.png) center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        "
-      >
-        <div class="frame-19">
-          <div class="we-re-on-a-mission-to-clean-up-the-industry">
-            We’re on a Mission To Clean Up the Industry
-          </div>
-          <div class="read-about-our-progress-in-our-latest-impact-report">
-            Read about our progress in our latest Impact Report.
-          </div>
-        </div>
-        <div class="button-section-5">
-          <div class="shop-now">
-            <a href="About/about.html">LEARN MORE ABOUT US</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- BANNER END -->
-
-    <!-- PRODUK MULAI -->
-    <div class="teks-category-2">
-      <h2 class="acc-text">Rekomendasi Produk</h2>
-          <!-- SECTION SEMUA PRODUK -->
-      <!-- Baju -->
-      <div class="menu-list">
-        <div class="menu-item baju">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <img
-              id="bajuModalTrigger"
-              src="/img/Baju-1.png"
-            />
-          </a>
-          <h2>Stussy Livin</h2>
-          <p>Rp. 389.000</p>
-          <a href="/Product/product.html" class="btn btn-outline-success">Lihat Produk</a>
-        </div>
-
-        <!-- Celana -->
-        <div class="menu-item celana">
-          <img
-            src="/img/Celana-1.png"
-          />
-          <h2>Gurkha pants</h2>
-          <p>Rp. 399.000</p>
-          <a href="/Product/product.html" class="btn btn-outline-success">Lihat Produk</a>
-        </div>
-
-        <!-- Jaket -->
-        <div class="menu-item jaket">
-          <img
-            src="/img/Jaket-1.png"
-          />
-          <h2>Sweat Adidas</h2>
-          <p>Rp. 149.000</p>
-          <a href="/Product/product.html" class="btn btn-outline-success">Lihat Produk</a>
-        </div>
-      </div>
-      <!-- Tambahkan produk lainnya dengan format yang serupa -->
-    </div>
-    <!-- SECTION SEMUA PRODUK END -->
-
-    <!-- TESTI START-->
-    <div class="teks-category-2">
-      <h3 class="acc-text">Testimony</h3>
-      <iframe src="Testimony/Testimony.html" width="100%" height="490px" frameborder="0"></iframe>
-    </div>
-    <!-- TESTI END-->
 
     <!-- shopping cart modal start -->
     <div class="modal" data-id="tableModal">
@@ -228,6 +113,92 @@
     </div>
     <!-- shopping cart modal end -->
 
+    <!-- FAQ START-->
+    <div class="faq-section">
+      <ul class="accordion">
+        <li>
+          <input type="radio" name="accordion" id="first" checked>
+          <label for="first">Apa itu WangiMantan?</label>
+          <div class="content">
+            <p>WangiMantan adalah platform online yang menyediakan penjualan baju bekas yang masih layak pakai dengan harga terjangkau.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="second">
+          <label for="second">Bagaimana Cara Kerja WangiMantan?</label>
+          <div class="content">
+            <p>WangiMantan mengumpulkan pakaian bekas dari berbagai sumber, melakukan proses pemilahan, pembersihan, dan penataan kembali untuk kemudian dijual secara online melalui platform mereka.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="third">
+          <label for="third">Apakah Baju di WangiMantan Berkualitas?</label>
+          <div class="content">
+            <p>Ya, kami memastikan bahwa baju-baju yang kami jual telah melalui proses seleksi ketat untuk memastikan kualitasnya tetap terjaga. Kami hanya menyediakan pakaian yang masih layak pakai dan dalam kondisi yang baik.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="fourth">
+          <label for="fourth">Apakah Harga Baju di WangiMantan Terjangkau?</label>
+          <div class="content">
+            <p>Kami berkomitmen untuk menyediakan pilihan baju bekas dengan harga yang terjangkau bagi semua kalangan. Harga-harga kami bersaing dan seringkali lebih rendah daripada harga baju baru di pasaran.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="fifth">
+          <label for="fifth">Apakah Barang di WangiMantan Tersedia dalam Berbagai Ukuran?</label>
+          <div class="content">
+            <p>Kami berusaha untuk menyediakan berbagai macam ukuran pakaian agar dapat memenuhi kebutuhan semua konsumen kami. Namun, ketersediaan ukuran dapat bervariasi tergantung pada stok yang tersedia.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="sixth">
+          <label for="sixth">Bagaimana Cara Membeli Barang di WangiMantan?</label>
+          <div class="content">
+            <p>Anda dapat membeli barang di WangiMantan dengan cara mengakses website kami dan menelusuri katalog produk yang tersedia. Setelah memilih barang yang diinginkan, Anda dapat melanjutkan ke proses pembayaran.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="seventh">
+          <label for="seventh">Apakah WangiMantan Menerima Pengembalian Barang?</label>
+          <div class="content">
+            <p>Ya, kami menerima pengembalian barang dengan beberapa syarat dan ketentuan yang berlaku. Anda dapat mempelajari lebih lanjut tentang kebijakan pengembalian kami di bagian terkait di website kami.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="eighth">
+          <label for="eighth">Bagaimana Cara Menghubungi Layanan Pelanggan WangiMantan?</label>
+          <div class="content">
+            <p>Anda dapat menghubungi layanan pelanggan WangiMantan melalui formulir kontak yang tersedia di website kami atau melalui email yang tertera di halaman kontak.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="ninth">
+          <label for="ninth">Apakah WangiMantan Memiliki Program Penjualan atau Diskon Khusus?</label>
+          <div class="content">
+            <p>Ya, WangiMantan kadang-kadang menyelenggarakan program penjualan khusus, diskon, atau promosi lainnya. Anda dapat mengikuti kami di media sosial atau mendaftar untuk newsletter kami untuk mendapatkan informasi terbaru tentang penawaran kami.</p>
+          </div>
+        </li>
+
+        <li>
+          <input type="radio" name="accordion" id="tenth">
+          <label for="tenth">Apakah WangiMantan Mengirimkan Barang ke Luar Negeri?</label>
+          <div class="content">
+            <p>Saat ini, kami hanya melayani pengiriman dalam negeri. Namun, kami terus mengupayakan ekspansi layanan kami ke wilayah internasional di masa mendatang.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- FAQ END-->
+
     <!-- FOOTER START-->
     <footer class="footer-newest-ver">
       <div class="container-footer-newest-ver">
@@ -235,7 +206,7 @@
           <div class="footer-col">
             <h4>WangiMantan</h4>
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="../index.html">Home</a></li>
               <li><a href="../Product/product.html">Product</a></li>
               <li><a href="../About/about.html">About Us</a></li>
               <li><a href="../Contact/Contact.html">Contact Us</a></li>
@@ -244,7 +215,7 @@
           <div class="footer-col">
             <h4>Get Help</h4>
             <ul>
-              <li><a href="FAQ/faq.html">FAQ</a></li>
+              <li><a href="#">FAQ</a></li>
               <li><a href="#">Shipping</a></li>
               <li><a href="#">Returns</a></li>
               <li><a href="#">Order Status</a></li>
