@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
     <link rel="stylesheet" href="login.css">
     <title>LOGIN - WangiMantan</title>
 </head>
@@ -58,6 +59,7 @@
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 <script>
     const container = document.getElementById('container');
     const registerBtn = document.getElementById('register');
@@ -83,10 +85,12 @@
         // Validasi input
         if (name.trim() !== '' && email.trim() !== '' && password.trim() !== '') {
             accounts.push({ name, email, password });
-            alert("Registration successful!");
-            container.classList.remove("active"); // Kembali ke tampilan Sign In setelah pendaftaran berhasil
+            swal("Registration Successful!", "", "success")
+                .then((value) => {
+                    container.classList.remove("active"); // Kembali ke tampilan Sign In setelah pendaftaran berhasil
+                });
         } else {
-            alert("Please fill in all fields.");
+            swal("Error!", "Please fill in all fields.", "error");
         }
     }
 
@@ -98,10 +102,12 @@
         // Periksa kredensial
         const account = accounts.find(acc => acc.email === email && acc.password === password);
         if (account) {
-            alert("Login successful!");
-            window.location.href = "/index.html"; // Arahkan ke index.html setelah login berhasil
+            swal("Login Successful!", "", "success")
+                .then((value) => {
+                    window.location.href = "/index.html"; // Arahkan ke index.html setelah login berhasil
+                });
         } else {
-            alert("Invalid email or password.");
+            swal("Error!", "Invalid email or password.", "error");
         }
     }
 
